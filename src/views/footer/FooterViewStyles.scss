@@ -1,0 +1,125 @@
+@mixin background-color {
+  background-color: rgb(25, 24, 53);
+}
+
+@mixin font-style {
+  color: black;
+  text-shadow: 2px 2px 7px rgb(255, 255, 255);
+}
+
+.footer-container {
+  @include background-color();
+  position: relative;
+  height: auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.footer-logo {
+  flex-basis: 5%;
+  position: relative;
+  align-self: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo span {
+  color: white;
+  font-family: "Rancho", cursive;
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);
+}
+
+.footer-mainpage-links {
+  @include font-style();
+  list-style-type: none;
+  font-family: "Rancho", cursive;
+  text-align: center;
+  padding: 10px;
+  font-size: 3em;
+
+  .footer-link {
+    text-decoration: none;
+    @include font-style();
+  }
+}
+
+.footer-mainpage-links li {
+  padding-top: 0.5em;
+  font-size: 0.45em;
+  font-weight: bold;
+}
+
+.footer-social {
+  @include font-style();
+  position: relative;
+  font-family: "Rancho", cursive;
+  font-size: 2.5em;
+  align-self: center;
+}
+.footer-follow {
+  @include font-style();
+  position: relative;
+  font-family: "Rancho", cursive;
+  font-size: 2.5em;
+  align-self: center;
+  flex-direction: row;
+}
+
+.icons {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  padding-inline-start: 0px;
+}
+
+.icons li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    max-width: 100px;
+  }
+  .footer-mainpage-links {
+    font-size: 1.9em;
+  }
+  .link span {
+    font-size: 1.1em;
+  }
+  .footer-social {
+    font-size: 1.7em;
+  }
+  .footer-follow {
+    font-size: 1.7em;
+  }
+  .icons img {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    max-width: 80px;
+  }
+  .footer-logo span {
+    font-size: 0.9em;
+  }
+  .footer-mainpage-links {
+    font-size: 2em;
+  }
+  .link span {
+    font-size: 1.1em;
+  }
+  .footer-social {
+    font-size: 1.5em;
+  }
+  .footer-follow {
+    font-size: 1.5em;
+  }
+  .icons img {
+    max-width: 70%;
+  }
+}

@@ -1,0 +1,215 @@
+.coaching-container {
+  position: relative;
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 1.25em;
+  text-shadow: none;
+  padding-bottom: 2em;
+}
+
+.coaching-container-rank {
+  position: relative;
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 1.25em;
+  text-shadow: none;
+  padding-bottom: 5em;
+}
+
+.coaching-container-rank-3 {
+  position: relative;
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 1.25em;
+  text-shadow: none;
+  padding-bottom: 3em;
+}
+
+.coaching-maintext {
+  position: relative;
+  font-family: "Rancho", cursive;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.rank-coaching-container {
+  position: relative;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.select-coaching-rank-grandmasters {
+  position: relative;
+  background-color: #d6d1d1;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 75%;
+  width: 20%;
+  cursor: pointer;
+  padding-bottom: 3em;
+}
+
+.select-coaching-rank-grandmasters:hover {
+  box-shadow: 0 0 10px #dde931, 0 0 40px #dde931, 0 0 80px #dde931;
+}
+
+.select-coaching-rank-down-diamond {
+  position: relative;
+  display: flex;
+  background-color: #d6d1d1;
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: center;
+  height: 75%;
+  margin-top: 10em;
+  width: 20%;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding-bottom: 3em;
+}
+
+.select-coaching-rank-down-diamond:hover {
+  box-shadow: 0 0 10px #463aec, 0 0 40px #463aec, 0 0 80px #463aec;
+}
+
+.select-coaching-rank-down-masters {
+  position: relative;
+  display: flex;
+  background-color: #d6d1d1;
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: center;
+  height: 75%;
+  margin-top: 10em;
+  width: 20%;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding-bottom: 3em;
+}
+
+.select-coaching-rank-down-masters:hover {
+  box-shadow: 0 0 10px #c57a17, 0 0 40px #c57a17, 0 0 80px #c57a17;
+}
+
+.coaching-rank {
+  position: absolute;
+  top: -12.5%;
+  height: 22.5%;
+}
+
+.level-of-coaching {
+  position: relative;
+  margin-top: 1.75em;
+  font-family: "Rancho", cursive;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.coaching-text {
+  position: relative;
+  margin-top: 3.5em;
+  font-family: "Rancho", cursive;
+  font-size: 1.5em;
+  margin-left: 1.5em;
+  width: 85%;
+}
+
+.coaching-price {
+  position: relative;
+  display: flex;
+  margin-top: 3em;
+  justify-content: center;
+  font-family: "Rancho", cursive;
+  font-size: 1.5em;
+}
+
+.navigation-buttons-coaching {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em;
+  cursor: pointer;
+
+  .prev-button {
+    position: relative;
+    background-color: rgb(223, 66, 66);
+    padding: 20px;
+    border-radius: 30%;
+    color: white;
+    font-size: 1.25em;
+    font-family: "Rancho", cursive;
+    margin-right: 10em;
+  }
+
+  .next-button {
+    background-color: rgb(86, 204, 82);
+    padding: 20px;
+    border-radius: 30%;
+    color: white;
+    font-size: 1.25em;
+    font-family: "Rancho", cursive;
+  }
+}
+
+.select-coaching-rank-down-gamemode-diamond {
+  position: relative;
+  display: flex;
+  background-color: #d6d1d1;
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: center;
+  height: 75%;
+  margin-top: 10em;
+  width: 20%;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding-bottom: 1em;
+}
+
+.select-coaching-rank-gamemode-diamond {
+  position: relative;
+  background-color: #d6d1d1;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 75%;
+  width: 20%;
+  cursor: pointer;
+  padding-bottom: 1em;
+}
+
+.select-coaching-rank-down-gamemode-gm {
+  position: relative;
+  display: flex;
+  background-color: #d6d1d1;
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: center;
+  height: 75%;
+  margin-top: 10em;
+  width: 20%;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding-bottom: 2em;
+}
+
+.paypal-button {
+  background-color: #d6d1d1;
+}
+
+.paypal-form {
+  background-color: #d6d1d1;
+}

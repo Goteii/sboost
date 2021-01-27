@@ -1,0 +1,25 @@
+.contact-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-image-holder {
+  display: flex;
+  justify-content: space-evenly;
+  height: 40%;
+  align-items: center;
+}
+
+.image-holder {
+  text-align: center;
+  font-size: 3em;
+}
+
+.image-button {
+  position: relative;
+  border-radius: 130px;
+  margin-bottom: 0.5em;
+}

@@ -1,0 +1,348 @@
+.boosting-container {
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 3em;
+  text-shadow: none;
+}
+
+.boosting-maintext {
+  font-family: "Rancho", cursive;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+
+  .error {
+    color: red;
+    position: relative;
+    display: flex;
+  }
+}
+
+.boosting-ranks {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 7em;
+  padding-bottom: 4em;
+
+  .mode-text {
+    display: flex;
+    justify-content: center;
+    font-family: "Rancho", cursive;
+    font-size: 4em;
+  }
+}
+
+.boosting-ranks-service {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 7em;
+}
+
+.navigation-buttons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em;
+  margin-top: 5.5em;
+  cursor: pointer;
+
+  .prev-button {
+    background-color: rgb(223, 66, 66);
+    padding: 20px;
+    border-radius: 30%;
+    color: white;
+    font-size: 1.25em;
+    font-family: "Rancho", cursive;
+    margin-right: 10em;
+  }
+
+  .next-button {
+    background-color: rgb(86, 204, 82);
+    padding: 20px;
+    border-radius: 30%;
+    color: white;
+    font-size: 1.25em;
+    font-family: "Rancho", cursive;
+  }
+}
+.choose_rank {
+  position: relative;
+  height: 7em;
+  top: 15em;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.choose_division {
+  position: relative;
+  height: 5em;
+  top: 9em;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.current-division {
+  position: relative;
+  margin-top: 2vw;
+  padding: 1vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.choose_future_division {
+  position: relative;
+  height: 5em;
+  top: 9em;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.choose_service {
+  position: relative;
+  height: 6em;
+  top: 12em;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.rank-text {
+  display: flex;
+  justify-content: center;
+  font-family: "Rancho", cursive;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.tier-container {
+  position: relative;
+  margin-top: 8.5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.tier-holder {
+  position: relative;
+}
+
+.tier-input {
+  position: relative;
+  cursor: pointer;
+  top: 3.5em;
+  height: 1.75em;
+  opacity: 0;
+}
+
+.tier {
+  font-family: "Rancho", cursive;
+  font-size: 3em;
+  cursor: pointer;
+  background-color: #f4eeee;
+}
+
+.service-description {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Rancho", cursive;
+  font-size: 1.25em;
+  margin-top: 1em;
+}
+
+.type-of-service {
+  position: relative;
+  flex-basis: 14.5%;
+}
+
+.type-of-service-duel {
+  position: relative;
+  flex-basis: 14.5%;
+}
+
+.service-holder-duel {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 7em;
+  justify-content: center;
+}
+
+.type-of-service-text {
+  display: flex;
+  justify-content: center;
+  font-family: "Rancho", cursive;
+  font-size: 2.5em;
+}
+
+.boosting-container-extras {
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 3em;
+  text-shadow: none;
+  padding-bottom: 5em;
+}
+.boosting-ranks-extras {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 7em;
+  padding-bottom: 14em;
+}
+.choose-extra {
+  position: relative;
+  background-color: #f4eeee;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 4em;
+  flex-basis: 5em;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(182, 178, 178);
+}
+
+.choose-extra:hover {
+  background-color: rgb(179, 231, 178);
+}
+
+.choose-extra-active {
+  position: relative;
+  background-color: #f4eeee;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 4em;
+  flex-basis: 5em;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(86, 204, 82);
+}
+
+.extras-input {
+  position: relative;
+  height: 4em;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.extra-check-sign {
+  position: relative;
+  right: 1em;
+  top: 0.5em;
+}
+
+.boosting-extra-option {
+  display: flex;
+  justify-content: center;
+}
+
+.extra-description {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Rancho", cursive;
+  font-size: 1.6em;
+  margin-top: 3em;
+}
+
+.boosting-container-shadow {
+  width: 100%;
+  height: 1000px;
+  padding-top: 3em;
+  background-color: #f4eeee;
+}
+
+.boosting-modal-container {
+  width: 100vw;
+  height: 75vh;
+  font-family: "Rancho", cursive;
+}
+
+.modal-upper-check {
+  padding: 0.5em;
+  font-size: 2em;
+  letter-spacing: 0.13vw;
+  text-align: center;
+  color: #000000;
+  animation: 1.5s modal-upper-check 0.05s forwards;
+  transform: translateX(-100%);
+}
+
+.values-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 1em 0em 0em 1em;
+  height: 75vh;
+  font-size: 30px;
+  color: #000000;
+  animation: 1.5s values-container 1s forwards;
+  transform: translateX(-100%);
+
+  .values-modal {
+    padding-bottom: 1.5em;
+    letter-spacing: 0.12em;
+
+    .inserted-values {
+      padding-left: 0.75em;
+      color: rgb(214, 75, 94);
+    }
+  }
+}
+
+.modal-buttons-container {
+  position: relative;
+  height: 25vh;
+  width: 100%;
+}
+
+.navigation-buttons-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 4em;
+  cursor: pointer;
+  font-size: 1.25em;
+  margin-left: 1.5em;
+  margin-right: 1em;
+
+  .prev-button-modal {
+    background-color: rgb(223, 66, 66);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 30%;
+    padding: 20px;
+    color: white;
+    font-family: "Rancho", cursive;
+    margin-right: 4em;
+    margin-left: 2em;
+  }
+}
+
+@keyframes values-container {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes modal-upper-check {
+  to {
+    transform: translateX(0);
+  }
+}

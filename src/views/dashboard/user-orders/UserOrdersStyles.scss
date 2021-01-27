@@ -1,0 +1,59 @@
+.order-container {
+  position: relative;
+  width: 100%;
+}
+
+.order-text {
+  margin-top: 0.5em;
+  position: relative;
+  text-align: center;
+  font-size: 3em;
+}
+
+.user-order {
+  position: relative;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.order-id {
+  position: relative;
+  text-align: center;
+}
+
+.order-type {
+  position: relative;
+  text-align: center;
+}
+
+.order-current-state {
+  position: relative;
+  text-align: center;
+}
+
+.feedback {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  .feedback-button {
+    background-color: rgb(255, 240, 29);
+    font-size: 1.5em;
+    border-radius: 20px;
+    width: 50%;
+    cursor: pointer;
+  }
+}
+
+.category {
+  position: relative;
+  font-size: 2.25em;
+}
+
+.value {
+  position: relative;
+  font-size: 1.5em;
+}

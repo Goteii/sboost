@@ -1,0 +1,132 @@
+@mixin background-color {
+  background-color: rgb(57, 56, 134);
+}
+
+@mixin marginBtnText {
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+%headliners-style {
+  font-family: "Rancho", cursive;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+
+.encourage-view-container {
+  @include background-color;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  .encourage-view-container-text {
+    @extend %headliners-style;
+  }
+}
+
+.badges-container {
+  flex-direction: row;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: stretch;
+  height: auto;
+
+  .badge {
+    width: 25%;
+    display: flex;
+  }
+
+  .badge-logo {
+    width: 30%;
+    justify-content: center;
+  }
+
+  .text-container {
+    width: 70%;
+
+    .badge-text {
+      @include background-color;
+      margin-top: 2px;
+      text-align: center;
+      font-family: "Rancho", cursive;
+      font-size: 1.5em;
+    }
+  }
+
+  .badge-header {
+    font-family: "Rancho", cursive;
+    font-size: 2.5em;
+  }
+}
+
+.slider-text {
+  @extend %headliners-style;
+  @include marginBtnText;
+}
+
+.encourage-opinion-text {
+  @extend %headliners-style;
+  @include marginBtnText;
+}
+
+.encourage-contact-text {
+  @extend %headliners-style;
+  margin-bottom: 0.25em;
+  margin-top: 1.5em;
+}
+
+@media screen and (max-width: 1024px) {
+  .encourage-view-container {
+    .encourage-view-container-text {
+      font-size: 3em;
+    }
+  }
+  .badges-container {
+    .badge-header {
+      font-size: 1.75em;
+    }
+  }
+  .slider-text {
+    font-size: 3em;
+  }
+  .encourage-contact-text {
+    font-size: 3em;
+  }
+  .encourage-opinion-text {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .encourage-view-container {
+    .encourage-view-container-text {
+      font-size: 2.5em;
+    }
+  }
+  .badges-container {
+    .badge-header {
+      font-size: 1.5em;
+    }
+    .text-container {
+      .badge-text {
+        font-size: 1.25em;
+      }
+    }
+  }
+  .slider-text {
+    font-size: 2.5em;
+  }
+  .encourage-contact-text {
+    font-size: 2.5em;
+  }
+  .encourage-opinion-text {
+    font-size: 2.5em;
+  }
+}

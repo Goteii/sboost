@@ -1,0 +1,47 @@
+.carousel-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  i {
+    font-size: 35px;
+  }
+}
+
+.slide-image {
+  min-width: 100%;
+  height: auto;
+  transition: 1.25s;
+  overflow: hidden;
+}
+
+.slide-image img {
+  display: flex;
+  margin: auto;
+}
+
+%btn-styles {
+  background: red;
+  position: absolute;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-family: "Rancho", cursive;
+  cursor: pointer;
+  &:hover {
+    color: rgb(0, 0, 0);
+  }
+}
+
+#prevBtn {
+  left: 20px;
+  @extend %btn-styles;
+}
+
+#nextBtn {
+  right: 20px;
+  @extend %btn-styles;
+}

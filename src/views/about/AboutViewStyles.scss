@@ -1,0 +1,36 @@
+.about-container {
+  position: relative;
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 3em;
+  text-shadow: none;
+}
+
+.about-maintext {
+  font-family: "Rancho", cursive;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-description {
+  display: flex;
+}
+
+.description-headers {
+  font-family: "Rancho", cursive;
+  font-size: 2.5em;
+  margin-top: 0.45em;
+}
+
+.description-text {
+  font-family: "Rancho", cursive;
+  font-size: 1.75em;
+  display: flex;
+  margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  white-space: pre-line;
+}

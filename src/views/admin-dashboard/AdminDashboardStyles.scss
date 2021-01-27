@@ -1,0 +1,76 @@
+.admin-dashboard-container {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(226, 221, 221);
+}
+
+.admin-dashboard-left-panel {
+  position: relative;
+  width: 15%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .admin-username-holder {
+    margin-top: 3em;
+    font-size: 2em;
+    font-family: "Rancho", cursive;
+    text-align: center;
+  }
+}
+
+.admin-dashboard-display-panel {
+  position: relative;
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: "Rancho", cursive;
+  border-left: 1px solid rgb(13, 14, 13);
+}
+
+.admin-logout-button-container {
+  display: flex;
+  justify-content: center;
+
+  .logout-button {
+    position: relative;
+    border: none;
+    background-color: #0c0b0b;
+    width: 50%;
+    margin-bottom: 1.5em;
+    padding: 0.25em;
+    text-align: center;
+    font-family: "Rancho", cursive;
+    font-size: 2.2em;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+}
+
+.admin-dashboard-left-panel-button-space {
+  position: relative;
+  width: 15%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid rgb(13, 14, 13);
+
+  .admin-logout-button-container {
+    position: relative;
+    background-color: #cccccc;
+    width: 40%;
+    height: 40%;
+    align-self: center;
+    text-align: center;
+    font-family: "Rancho", cursive;
+    font-size: 2.2em;
+    padding-top: 0.25em;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+}

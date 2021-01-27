@@ -1,0 +1,22 @@
+.admin-order-container {
+  position: relative;
+  width: 100%;
+}
+
+.order-table {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-value {
+  flex: 1;
+  text-align: center;
+  font-size: 2em;
+}
+
+.order-button {
+  background-color: #64c764;
+  border: none;
+  letter-spacing: 3px;
+}

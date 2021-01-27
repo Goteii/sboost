@@ -1,0 +1,174 @@
+@mixin background-color {
+  background-color: rgb(25, 24, 53);
+}
+
+.navbar_container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+  z-index: 4;
+  width: 95.5%;
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);
+}
+
+.navbar_holder {
+  flex-basis: 100%;
+}
+
+.navbar_top {
+  padding: 10px;
+  margin-left: 5px;
+  font-family: "Rancho", cursive;
+  font-size: 1.1em;
+  border-bottom: 1px solid white;
+  color: white;
+  display: flex;
+
+  .navbar_top_text {
+    margin-left: 15px;
+    align-self: center;
+  }
+
+  .navbar_top_icons_holder {
+    display: flex;
+
+    .facebook-icon {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.navbar_bottom {
+  display: flex;
+  margin-top: 1.4%;
+
+  .navbar_bottom-button {
+    flex-basis: 20%;
+    text-align: center;
+    font-family: "Rancho", cursive;
+    font-size: 1.6em;
+    color: white;
+  }
+
+  .navbar-link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .navbar_bottom-button-modal {
+    cursor: pointer;
+  }
+
+  .link {
+    text-decoration: none;
+    color: rgb(250, 75, 75);
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu div {
+  background-color: rgb(255, 255, 255);
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar_logo {
+    width: 95%;
+    cursor: pointer;
+  }
+  .navbar_bottom {
+    .navbar_bottom-button {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar_container {
+    @include background-color;
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 10vh;
+    overflow-x: hidden;
+    border-bottom-left-radius: 15px;
+  }
+  .navbar_holder {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar_logo {
+    position: relative;
+    width: 75%;
+  }
+  .navbar_top {
+    display: none;
+  }
+  .navbar_top_icons_holder {
+    display: none;
+  }
+  .navbar_top_text span {
+    display: none;
+  }
+  .navbar_bottom {
+    @include background-color;
+    position: fixed;
+    flex-direction: column;
+    height: 90vh;
+    top: 10vh;
+    right: 0;
+    margin: 0;
+    width: 40vw;
+    padding-top: 3em;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    border-bottom-left-radius: 30px;
+
+    .navbar_bottom-button {
+      opacity: 0;
+    }
+  }
+  .mobile-menu {
+    display: block;
+    cursor: pointer;
+    width: 10vw;
+    padding-top: 2em;
+    padding-left: 0.75em;
+  }
+  .mobile-menu div {
+    transition: all 0.6s ease;
+  }
+}
+
+.navbar-active {
+  transform: translateX(0%);
+}
+
+@keyframes mobileMenuFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(+45deg) translate(-5px, -6px);
+}

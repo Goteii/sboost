@@ -1,0 +1,118 @@
+.opinions-container {
+  position: relative;
+  width: 100%;
+  background-color: #f4eeee;
+  height: auto;
+  padding-top: 1.25em;
+  text-shadow: none;
+
+  .opinions-maintext {
+    position: relative;
+    font-family: "Rancho", cursive;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.opinions-list-container {
+  position: relative;
+  margin-top: 6em;
+  height: 80%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.opinions-current-page-container {
+  text-align: center;
+  font-family: "Rancho", cursive;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+}
+
+.opinions-list-nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.5em;
+}
+
+.opinions-page-container {
+  position: relative;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.opinions-page-buttons {
+  border: none;
+  border-radius: 0px;
+  background-color: #f4eeee;
+  color: black;
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: 0px;
+  letter-spacing: 0px;
+  text-transform: none;
+  transition: none;
+  cursor: pointer;
+}
+
+.opinions-page-buttons:hover {
+  color: red;
+}
+
+.opinions-list-body {
+  position: relative;
+  padding-bottom: 2em;
+}
+
+.opinion {
+  display: flex;
+  margin-top: 1em;
+  width: 100vw;
+}
+
+.author-header-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 10vw;
+}
+
+.author-header {
+  position: relative;
+  font-family: "Rancho", cursive;
+  font-size: 1.5em;
+  margin: 2em;
+}
+
+.author-body-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 80vw;
+}
+
+.author-body {
+  position: relative;
+  padding-left: 2em;
+  text-align: justify;
+}
+
+.author-body-container-stars {
+  position: relative;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+}
+
+.author-body-stars {
+  position: relative;
+  align-self: center;
+}
