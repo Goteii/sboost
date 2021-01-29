@@ -7,7 +7,7 @@ import CoachingView from "./coaching-view/CoachingView";
 
 import { CoachingFormState } from "./CoachingModel";
 
-export default class CoachingForm extends Component {
+class CoachingForm extends Component {
   readonly state: CoachingFormState = {
     step: 1,
     selectLevelOfCoaching: "",
@@ -94,3 +94,5 @@ export default class CoachingForm extends Component {
     }
   }
 }
+
+export default CoachingForm;
