@@ -5,6 +5,7 @@ import { OrderPayload, OrderResponse } from "../../../api/services/orders/models
 
 import "./OrdersStyles.scss";
 import UpdateOrderModal from "../update-order/UpdateOrderModal";
+import { baseInstance } from "../../../api/instance";
 
 const Orders = () => {
   const [apiOrders, setApiOrders] = useState<OrderResponse[]>([]);
@@ -29,7 +30,11 @@ const Orders = () => {
 
 
  const sendUpdatedOrder = () => {
-      // obsłużyć
+  baseInstance.patch("Order", {
+    id: 3,
+    state: 2
+  }).then(res => console.log(res))
+  .catch(e => console.log(e));
   }
 
   const toggleModal = () => {
