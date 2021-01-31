@@ -1,8 +1,10 @@
 import { silverConquest, silverConquestOff, goldConquest, goldConquestOff, platinumConquest, platinumConquestOff,
-     diamondConquest, diamondConquestOff } from "../images/ExportedImages";
+     diamondConquest, diamondConquestOff, silverJoustOn, silverJoustOff, goldJoustOn, goldJoustOff, platinumJoustOn, platinumJoustOff, diamondJoustOn,
+      diamondJoustOff, silverDuelOn, silverDuelOff, goldDuelOn, goldDuelOff, platinumDuelOn, platinumDuelOff, diamondDuelOn, diamondDuelOff, mastersDuelOn, mastersDuelOff,
+       mastersJoustOn, mastersJoustOff, mastersConquestOn, mastersConquestOff } from "../images/ExportedImages";
 
 
-export const divisions = [
+export const divisionsConquest = [
     {
       id: 1,
       name: "Silver",
@@ -31,7 +33,92 @@ export const divisions = [
       imageOn: diamondConquest,
       imageOff: diamondConquestOff,
     },
+    {
+      id: 5,
+      name: "Masters",
+      value: 6,
+      imageOn: mastersConquestOn,
+      imageOff: mastersConquestOff
+    }
   ];
+
+  export const divisionsJoust = [
+    {
+      id: 1,
+      name: "Silver",
+      value: 2,
+      imageOn: silverJoustOn,
+      imageOff: silverJoustOff,
+    },
+    {
+      id: 2,
+      name: "Gold",
+      value: 3,
+      imageOn: goldJoustOn,
+      imageOff: goldJoustOff
+    },
+    {
+      id: 3,
+      name: "Platinum",
+      value: 4,
+      imageOn: platinumJoustOn,
+      imageOff: platinumJoustOff,
+    },
+    {
+      id: 4,
+      name: "Diamond",
+      value: 5,
+      imageOn: diamondJoustOn,
+      imageOff: diamondJoustOff,
+    },
+    {
+      id: 5,
+      name: "Masters",
+      value: 6,
+      imageOn: mastersJoustOn,
+      imageOff: mastersJoustOff
+    }
+  ];
+
+  export const divisionsDuel = [
+    {
+      id: 1,
+      name: "Silver",
+      value: 2,
+      imageOn: silverDuelOn,
+      imageOff: silverDuelOff,
+    },
+    {
+      id: 2,
+      name: "Gold",
+      value: 3,
+      imageOn: goldDuelOn,
+      imageOff: goldDuelOff,
+    },
+    {
+      id: 3,
+      name: "Platinum",
+      value: 4,
+      imageOn: platinumDuelOn,
+      imageOff: platinumDuelOff,
+    },
+    {
+      id: 4,
+      name: "Diamond",
+      value: 5,
+      imageOn: diamondDuelOn,
+      imageOff: diamondDuelOff,
+    },
+    {
+      id: 5,
+      name: "Masters",
+      value: 6,
+      imageOn: mastersDuelOn,
+      imageOff: mastersDuelOff
+    }
+  ];
+
+
 
   export const tiers = [
     {

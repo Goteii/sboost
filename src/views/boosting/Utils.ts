@@ -1,34 +1,38 @@
 export const divisionsCost: any = {
   1: {
     index: 1,
-    cost: 5,
+    cost: 7,
   },
   2: {
     index: 2,
-    cost: 7,
+    cost: 10,
   },
   3: {
     index: 3,
-    cost: 11,
+    cost: 13,
   },
   4: {
     index: 4,
-    cost: 14,
+    cost: 18,
   },
   5: {
     index: 5,
-    cost: 18,
+    cost: 24,
   },
+  6: {
+    index: 6,
+    cost: 150
+  }
 };
 
 export const modeCost: any = {
   2: {
     index: 1,
-    cost: 2.5,
+    cost: 1,
   },
   1: {
     index: 2,
-    cost: 1.5,
+    cost: 1,
   },
   3: {
     index: 3,
@@ -39,15 +43,15 @@ export const modeCost: any = {
 export const typeOfService: any = {
   2: {
     index: 1,
-    cost: 30,
+    cost: 1,
   },
   1: {
     index: 2,
-    cost: 0,
+    cost: 1,
   },
   3: {
     index: 3,
-    cost: 10,
+    cost: 1.5,
   },
 };
 
@@ -65,10 +69,17 @@ export const calculate = (
   let modeSelectionCost: any = modeCost[byMode.mode.toLowerCase()].cost;
   let serviceCost: any = typeOfService[serviceObj.service].cost;
 
+  // let costToFinishDivision: any =
+  //   current.tier - 1 !== 0 && current.division !== to.division
+  //     ? (current.tier - 1) * divisionsCost[current.division.toLowerCase()].cost
+  //     :  divisionsCost[current.division.toLowerCase()].cost * (current.tier - to.tier);
+
   let costToFinishDivision: any =
-    current.tier - 1 !== 0 && current.division !== to.division
-      ? (current.tier - 1) * divisionsCost[current.division.toLowerCase()].cost
-      : divisionsCost[current.division.toLowerCase()].cost;
+  current.division === to.division ? divisionsCost[current.division.toLowerCase()].cost * (current.tier - to.tier) 
+  // : current.tier - 1 !== 0 ? (current.tier - 1) * divisionsCost[current.division.toLowerCase()].cost 
+  : current.tier -1  === 0 && current.tier - to.tier === -4 ? (current.tier) * divisionsCost[to.division.toLowerCase()].cost
+  : (current.tier - 1) * divisionsCost[current.division.toLowerCase()].cost
+  // : to.division - current.division === 1 && current.tier - to.tier <= 0 ? divisionsCost[to.division.toLowerCase()].cost * 
 
   //run through each division calculation
   //start at +1 because you've already calculated the cost to finish the current division
@@ -111,8 +122,8 @@ export const calculate = (
     serviceCost
   );
   return (
-    (costToFinishDivision + costThroughDivisions) * modeSelectionCost +
-    serviceCost
+    (costToFinishDivision + costThroughDivisions) * serviceCost * modeSelectionCost
+     
   );
 };
 
@@ -162,6 +173,9 @@ else if (division === 4) {
 }
 else if (division === 5) {
   return "Diamond"
+}
+else if (division === 6) {
+  return "Masters"
 }
 }
 

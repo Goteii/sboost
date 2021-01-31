@@ -34,7 +34,7 @@ const CoachingModeGrandmaster = (props: CoachingSelectMode) => {
   ];
 
   const cardsMapped = cards.map((card) => (
-    <div key={card.id} className="select-coaching-rank-down-gamemode-gm" onClick={card.onClick}>
+    <div key={card.id} className="select-coaching-rank-down-gamemode-gm grandmasters" onClick={card.onClick}>
         <img src={card.img} alt="rank-icon" className="coaching-rank" id={card.idImg} />
         <div className="level-of-coaching">{card.typeOfCoaching}</div>
         <div className="coaching-text">

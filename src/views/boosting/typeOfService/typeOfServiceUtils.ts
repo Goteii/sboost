@@ -18,7 +18,7 @@ export const typeOfService = [
       imgOn: boostingServiceDuo,
       imgOff: boostingServiceDuoOff,
       description:
-        "  Booster will play with another booster/s who is/are playing on another account/s at the same time. The quickest type of service and most efficient one.",
+         "Booster will play with another booster/s who is/are playing on another account/s at the same time. The quickest type of service and most efficient one.",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export const typeOfService = [
       imgOn: boostingServiceWithOwner,
       imgOff: boostingServiceWithOwnerOff,
       description:
-        "  Booster will be playing with owner at set hours. Much slower type of service if both sides have a job.",
+        "  Booster will be playing with owner at set hours. Much slower type of service. EXTRA 50%",
     },
   ];
 

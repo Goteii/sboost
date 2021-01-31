@@ -17,7 +17,7 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         inputButton: (
           <input
             type="checkbox"
-            className="choose_rank"
+            className="choose-rank"
             name="selectMode"
             id="isJoust"
             value="1"
@@ -26,9 +26,9 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         ),
         imageHolder:
           +valuesFormBoosting.selectMode === 1 ? (
-            <img src={joustIconOn} alt="joust_icon" />
+            <img src={joustIconOn} alt="joust_icon" className="select-boosting mode"/>
           ) : (
-            <img src={joustIconOff} alt="joust_icon_off" />
+            <img src={joustIconOff} alt="joust_icon_off" className="select-boosting mode"/>
           ),
       },
       {
@@ -37,7 +37,7 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         inputButton: (
           <input
             type="checkbox"
-            className="choose_rank"
+            className="choose-rank"
             id="isConquest"
             name="selectMode"
             value="2"
@@ -46,9 +46,9 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         ),
         imageHolder:
           +valuesFormBoosting.selectMode === 2 ? (
-            <img src={conquestIconOn} alt="conquest_icon" />
+            <img src={conquestIconOn} alt="conquest_icon" className="select-boosting mode" />
           ) : (
-            <img src={conquestIconOff} alt="conquest_icon_off" />
+            <img src={conquestIconOff} alt="conquest_icon_off" className="select-boosting mode" />
           ),
       },
       {
@@ -57,7 +57,7 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         inputButton: (
           <input
             type="checkbox"
-            className="choose_rank"
+            className="choose-rank"
             name="selectMode"
             id="isDuel"
             value="3"
@@ -66,9 +66,9 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         ),
         imageHolder:
           +valuesFormBoosting.selectMode === 3 ? (
-            <img src={duelIconOn} alt="duel_icon" />
+            <img src={duelIconOn} alt="duel_icon" className="select-boosting mode"/>
           ) : (
-            <img src={duelIconOff} alt="duel_icon_off" />
+            <img src={duelIconOff} alt="duel_icon_off" className="select-boosting mode"/>
           ),
       },
     ];
@@ -85,7 +85,7 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         <span className="boosting-maintext">
           Choose mode you wish to get higher rank at:
         </span>
-        <div className="boosting-ranks">{modeOptions}</div>
+        <div className="boosting-ranks-container">{modeOptions}</div>
         <div className="navigation-buttons">
           <Link to="/">
             <div className="prev-button">HOME</div>

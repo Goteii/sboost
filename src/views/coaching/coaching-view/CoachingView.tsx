@@ -25,7 +25,7 @@ const CoachingView = (props:CoachingViewProps) => {
   const ranks = [
     {
       id: 1,
-      className: "select-coaching-rank-down-masters",
+      className: "select-coaching-rank-down masters",
       onClick: getMaster,
       img: conquestMasters,
       levelOfCoaching: "Masters coaching",
@@ -35,7 +35,7 @@ const CoachingView = (props:CoachingViewProps) => {
     }, 
     {
       id: 2,
-      className: "select-coaching-rank-grandmasters",
+      className: "select-coaching-rank grandmasters",
       onClick: getGrandmaster,
       img: conquestIconOn,
       levelOfCoaching: "Grandmaster coaching",
@@ -45,7 +45,7 @@ const CoachingView = (props:CoachingViewProps) => {
     },
     {
       id: 3,
-      className: "select-coaching-rank-down-diamond",
+      className: "select-coaching-rank-down diamond",
       onClick: getDiamond,
       img: duelDiamond,
       levelOfCoaching: "Diamond coaching",

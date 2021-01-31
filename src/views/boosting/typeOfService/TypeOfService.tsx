@@ -18,7 +18,7 @@ const TypeOfService = (props: SelectionProps) => {
         <span className="type-of-service-text">{service.name}</span>
         <input
           type="checkbox"
-          className="choose_service"
+          className="choose-service"
           name="typeOfService"
           value={service.value}
           onChange={handleChange}
@@ -29,7 +29,7 @@ const TypeOfService = (props: SelectionProps) => {
               ? service.imgOn
               : service.imgOff
           }
-          alt={service.name + "icon"}
+          alt={service.name + "icon"} className="select-boosting"
         />
         <span className="service-description">{service.description}</span>
       </div>

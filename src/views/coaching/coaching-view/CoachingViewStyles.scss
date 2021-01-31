@@ -15,7 +15,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding-top: 1.25em;
+  padding-top: 2em;
   text-shadow: none;
   padding-bottom: 2em;
 }
@@ -25,7 +25,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  padding-top: 1.25em;
+  padding-top: 2em;
   text-shadow: none;
   padding-bottom: 5em;
 }
@@ -59,7 +59,7 @@
   justify-content: space-evenly;
 }
 
-.select-coaching-rank-grandmasters {
+.select-coaching-rank {
   @include cards-color;
   @extend %width;
   position: relative;
@@ -72,13 +72,11 @@
   padding-bottom: 3em;
 }
 
-.select-coaching-rank-grandmasters:hover,
-.select-coaching-rank-down-gamemode-gm:hover {
+.grandmasters:hover {
   box-shadow: 0 0 10px #dde931, 0 0 40px #dde931, 0 0 80px #dde931;
 }
 
-.select-coaching-rank-down-diamond,
-.select-coaching-rank-down-masters {
+.select-coaching-rank-down {
   @include cards-color;
   @extend %width;
   position: relative;
@@ -93,30 +91,11 @@
   padding-bottom: 3em;
 }
 
-.select-coaching-rank-down-diamond:hover,
-.select-coaching-rank-down-gamemode-diamond:hover,
-.select-coaching-rank-gamemode-diamond:hover {
+.diamond:hover {
   box-shadow: 0 0 10px #463aec, 0 0 40px #463aec, 0 0 80px #463aec;
 }
 
-.select-coaching-rank-down-masters {
-  @include cards-color;
-  @extend %width;
-  position: relative;
-  display: flex;
-  border-radius: 15px;
-  flex-direction: row;
-  justify-content: center;
-  height: 75%;
-  margin-top: 10em;
-  flex-wrap: wrap;
-  cursor: pointer;
-  padding-bottom: 3em;
-}
-
-.select-coaching-rank-down-masters:hover,
-.select-coaching-rank-down-gamemode-masters:hover,
-.select-coaching-rank-gamemode-masters:hover {
+.masters:hover {
   box-shadow: 0 0 10px #8c3fa3, 0 0 40px #963da1, 0 0 80px #8b35a0;
 }
 
@@ -186,8 +165,7 @@
   }
 }
 
-.select-coaching-rank-down-gamemode-diamond,
-.select-coaching-rank-down-gamemode-masters {
+.select-coaching-rank-down-gamemode {
   @include cards-color;
   @extend %width;
   position: relative;
@@ -201,8 +179,7 @@
   padding-bottom: 1em;
 }
 
-.select-coaching-rank-gamemode-diamond,
-.select-coaching-rank-gamemode-masters {
+.select-coaching-rank-gamemode {
   @include cards-color;
   @extend %width;
   position: relative;
@@ -246,12 +223,10 @@
     font-size: 2em;
     margin-top: 2.5em;
   }
-  .select-coaching-rank-grandmasters,
-  .select-coaching-rank-down-gamemode-masters,
-  .select-coaching-rank--gamemode-masters,
-  .select-coaching-rank-down-diamond,
-  .select-coaching-rank-down-gamemode-diamond,
-  .select-coaching-rank-gamemode-diamond {
+  .select-coaching-rank,
+  .select-coaching-rank-down-gamemode,
+  .select-coaching-rank-gamemode,
+  .select-coaching-rank-down {
     width: 17.5em;
     font-size: 0.8em;
   }
@@ -266,12 +241,10 @@
     max-height: 100px;
     top: -12.5%;
   }
-  .select-coaching-rank-grandmasters,
-  .select-coaching-rank-down-gamemode-masters,
-  .select-coaching-rank-gamemode-masters,
-  .select-coaching-rank-down-diamond,
-  .select-coaching-rank-down-gamemode-diamond,
-  .select-coaching-rank-gamemode-diamond {
+  .select-coaching-rank,
+  .select-coaching-rank-down-gamemode,
+  .select-coaching-rank-gamemode,
+  .select-coaching-rank-down {
     width: 16.5em;
     font-size: 0.7em;
   }
@@ -281,12 +254,10 @@
 }
 
 @media screen and (max-width: 645px) {
-  .select-coaching-rank-grandmasters,
-  .select-coaching-rank-down-gamemode-masters,
-  .select-coaching-rank-gamemode-masters,
-  .select-coaching-rank-down-diamond,
-  .select-coaching-rank-down-gamemode-diamond,
-  .select-coaching-rank-gamemode-diamond {
+  .select-coaching-rank,
+  .select-coaching-rank-down-gamemode,
+  .select-coaching-rank-gamemode,
+  .select-coaching-rank-down {
     width: 16em;
     font-size: 0.6em;
   }

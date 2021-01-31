@@ -79,7 +79,8 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
             <div className="prev-button-modal" onClick={previousStep}>
               <span className="text">BACK </span>
             </div>
-            <button onClick={sendOrderToDb}>Click me</button>
+            <div className="next-button-modal">
+            {/* <button onClick={sendOrderToDb}>Click me</button> */}
             <form
               action="https://www.paypal.com/cgi-bin/webscr"
               method="post"
@@ -125,6 +126,7 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
                 height="1"
               />
             </form>
+            </div>
           </div>
         </div>
       </div>

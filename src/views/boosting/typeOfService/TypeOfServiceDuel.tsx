@@ -18,7 +18,7 @@ const TypeOfServiceDuel = (props: SelectionProps) => {
         <span className="type-of-service-text">{service.name}</span>
         <input
           type="checkbox"
-          className="choose_service"
+          className="choose-service"
           name="typeOfService"
           value={service.value}
           onChange={handleChange}

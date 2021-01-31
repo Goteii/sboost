@@ -21,7 +21,7 @@
   }
 }
 
-.boosting-ranks {
+.boosting-ranks-container {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -35,6 +35,10 @@
     font-family: "Rancho", cursive;
     font-size: 4em;
   }
+}
+
+.boosting-rank {
+  position: relative;
 }
 
 .boosting-ranks-service {
@@ -73,7 +77,7 @@
     font-family: "Rancho", cursive;
   }
 }
-.choose_rank {
+.choose-rank {
   position: relative;
   height: 7em;
   top: 15em;
@@ -83,7 +87,7 @@
   opacity: 0;
 }
 
-.choose_division {
+.choose-division {
   position: relative;
   height: 5em;
   top: 9em;
@@ -111,7 +115,7 @@
   opacity: 0;
 }
 
-.choose_service {
+.choose-service {
   position: relative;
   height: 6em;
   top: 12em;
@@ -162,6 +166,9 @@
   font-family: "Rancho", cursive;
   font-size: 1.25em;
   margin-top: 1em;
+  letter-spacing: 1.25px;
+  word-spacing: 2px;
+  text-align: center;
 }
 
 .type-of-service {
@@ -251,6 +258,9 @@
   display: flex;
   justify-content: center;
 }
+.boosting-extra {
+  width: 45%;
+}
 
 .extra-description {
   position: relative;
@@ -259,6 +269,9 @@
   font-family: "Rancho", cursive;
   font-size: 1.6em;
   margin-top: 3em;
+  text-align: center;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
 }
 
 .boosting-container-shadow {
@@ -316,11 +329,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 4em;
   cursor: pointer;
   font-size: 1.25em;
-  margin-left: 1.5em;
-  margin-right: 1em;
+  margin-top: 1.5em;
+  align-items: center;
 
   .prev-button-modal {
     background-color: rgb(223, 66, 66);
@@ -333,6 +345,9 @@
     margin-right: 4em;
     margin-left: 2em;
   }
+  .next-button-modal {
+    height: auto;
+  }
 }
 
 @keyframes values-container {
@@ -344,5 +359,69 @@
 @keyframes modal-upper-check {
   to {
     transform: translateX(0);
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .boosting-maintext {
+    font-size: 3.5em;
+  }
+  .select-boosting {
+    justify-content: center;
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+  .boosting-rank {
+    width: 25%;
+  }
+  .boosting-ranks-container {
+    .mode-text {
+      font-size: 3.5em;
+    }
+  }
+  .division {
+    width: 15%;
+  }
+  .tier {
+    font-size: 2.25em;
+  }
+  .type-of-service-text {
+    font-size: 2.25em;
+  }
+  .service-description {
+    font-size: 1.2em;
+  }
+  .extra-description {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and(max-width:768px) {
+  .boosting-maintext {
+    font-size: 2.5em;
+  }
+  .select-boosting {
+    justify-content: center;
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+  .boosting-rank {
+    width: 25%;
+  }
+  .boosting-ranks-container {
+    .mode-text {
+      font-size: 2.5em;
+    }
+  }
+  .rank-text {
+    font-size: 2em;
+  }
+  .tier {
+    font-size: 1.75em;
+  }
+  .type-of-service-text {
+    font-size: 2em;
   }
 }
