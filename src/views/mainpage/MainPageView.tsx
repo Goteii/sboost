@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter, Route } from "react-router-dom";
 
-import FirstView from "../video/FirstView";
+import FirstView from "../first-view/FirstView";
 import BoostingForm from "../boosting/BoostingForm";
 import EncourageView from "../encourage/EncourageView";
 import FooterView from "../footer/FooterView";
