@@ -1,34 +1,38 @@
 export const divisionsCost: any = {
   1: {
     index: 1,
-    cost: 5,
+    cost: 7,
   },
   2: {
     index: 2,
-    cost: 7,
+    cost: 10,
   },
   3: {
     index: 3,
-    cost: 11,
+    cost: 13,
   },
   4: {
     index: 4,
-    cost: 14,
+    cost: 18,
   },
   5: {
     index: 5,
-    cost: 18,
+    cost: 24,
   },
+  6: {
+    index: 6,
+    cost: 150
+  }
 };
 
 export const modeCost: any = {
   2: {
     index: 1,
-    cost: 2.5,
+    cost: 1,
   },
   1: {
     index: 2,
-    cost: 1.5,
+    cost: 1,
   },
   3: {
     index: 3,
@@ -39,15 +43,15 @@ export const modeCost: any = {
 export const typeOfService: any = {
   2: {
     index: 1,
-    cost: 30,
+    cost: 1,
   },
   1: {
     index: 2,
-    cost: 0,
+    cost: 1,
   },
   3: {
     index: 3,
-    cost: 10,
+    cost: 1.5,
   },
 };
 
@@ -58,22 +62,17 @@ export const calculate = (
   byMode: any,
   serviceObj: any
 ) => {
-  //calculate how much to finish current division so you don't charge for a whole division
-  //current tier - 1 to see how many are left --- tier 4 to 1 would be 3 so -1 works
-  //multiply by cost basis for that division
 
   let modeSelectionCost: any = modeCost[byMode.mode.toLowerCase()].cost;
   let serviceCost: any = typeOfService[serviceObj.service].cost;
 
   let costToFinishDivision: any =
-    current.tier - 1 !== 0 && current.division !== to.division
-      ? (current.tier - 1) * divisionsCost[current.division.toLowerCase()].cost
-      : divisionsCost[current.division.toLowerCase()].cost;
+  current.division === to.division ? divisionsCost[current.division.toLowerCase()].cost * (current.tier - to.tier) 
+  : (current.tier - 1) * divisionsCost[current.division.toLowerCase()].cost
 
-  //run through each division calculation
-  //start at +1 because you've already calculated the cost to finish the current division
-  //only compare < because it will stop short of the division they selected, which you don't want to charge whole price for if they only selected a certain tier
+
   let costThroughDivisions = 0;
+
   for (
     let i = divisionsCost[current.division.toLowerCase()].index + 1;
     i < divisionsCost[to.division.toLowerCase()].index;
@@ -88,31 +87,47 @@ export const calculate = (
         return;
       }
     });
-    if (division) {
-      //find can return undefined, might as well account for it
-      costThroughDivisions += division.cost * 5; //times 5 because it's going through all tiers
+    if (division) {  
+      costThroughDivisions += division.cost * 5;
     }
   }
 
-  //now you have through the divisions and the cost to finish their current division
-  //now calculate to get them to their desired tier
-  //starts at 5, subtract by their destination to find the difference
+  let costToDestinationTier = 0;
 
-  // let costToDestinationTier =
-  //   (5 - to.tier) * divisionsCost[to.division.toLowerCase()].cost;
+  for (
+    let i = divisionsCost[current.division.toLowerCase()].index;
+    i < divisionsCost[to.division.toLowerCase()].index;
+    i++
+  ) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    let division: any = null;
+    // eslint-disable-next-line array-callback-return
+    Object.keys(divisionsCost).find((div) => {
+      if (i === divisionsCost[div].index) {
+        division = divisionsCost[div];
+        // eslint-disable-next-line array-callback-return
+        return;
+      }
+    });
+    if (divisionsCost[current.division.toLowerCase()].index + 1 === divisionsCost[to.division.toLowerCase()].index ) {
+      costToDestinationTier += (6 - to.tier) * divisionsCost[to.division.toLowerCase()].cost;
+   }
+   else if (divisionsCost[current.division.toLowerCase()].index + 2 === divisionsCost[to.division.toLowerCase()].index) {
+    costToDestinationTier += (6 - to.tier) * divisionsCost[to.division.toLowerCase()].cost / 2;
+   }
+   else if (divisionsCost[current.division.toLowerCase()].index + 3 === divisionsCost[to.division.toLowerCase()].index) {
+    costToDestinationTier += (6 - to.tier) * divisionsCost[to.division.toLowerCase()].cost / 3;
+   }
+   else if(divisionsCost[current.division.toLowerCase()].index + 4 === divisionsCost[to.division.toLowerCase()].index) {
+   costToDestinationTier += (6 - to.tier) * divisionsCost[to.division.toLowerCase()].cost / 4;
+  }
+  else if(divisionsCost[current.division.toLowerCase()].index + 5 === divisionsCost[to.division.toLowerCase()].index) {
+   costToDestinationTier += (6 - to.tier) * divisionsCost[to.division.toLowerCase()].cost / 5;
+  }
+   }
 
-  //return the sum
-  console.log(
-    "Individual Costs",
-    costToFinishDivision,
-    costThroughDivisions,
-    // costToDestinationTier,
-    modeSelectionCost,
-    serviceCost
-  );
   return (
-    (costToFinishDivision + costThroughDivisions) * modeSelectionCost +
-    serviceCost
+    (costToFinishDivision + costThroughDivisions + costToDestinationTier) * serviceCost * modeSelectionCost
   );
 };
 
@@ -162,6 +177,9 @@ else if (division === 4) {
 }
 else if (division === 5) {
   return "Diamond"
+}
+else if (division === 6) {
+  return "Masters"
 }
 }
 

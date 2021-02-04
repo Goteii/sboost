@@ -61,12 +61,6 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
               </span>
             </span>
             <span className="values-modal">
-              Extras:
-              <span className="inserted-values">
-                {valuesFormBoosting.extras}
-              </span>
-            </span>
-            <span className="values-modal">
               Price:
               <span className="inserted-values">
                 {calculate(costCurrent, costFuture, modeCost, service)} €
@@ -79,7 +73,8 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
             <div className="prev-button-modal" onClick={previousStep}>
               <span className="text">BACK </span>
             </div>
-            <button onClick={sendOrderToDb}>Click me</button>
+            <div className="next-button-modal">
+            {/* <button onClick={sendOrderToDb}>Click me</button> */}
             <form
               action="https://www.paypal.com/cgi-bin/webscr"
               method="post"
@@ -125,6 +120,7 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
                 height="1"
               />
             </form>
+            </div>
           </div>
         </div>
       </div>

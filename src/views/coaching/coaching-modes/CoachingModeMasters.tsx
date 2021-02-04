@@ -23,7 +23,7 @@ const chooseJoust = () => {
   const cards = [
     {
       id: 1,
-      className: "select-coaching-rank-down-gamemode-masters",
+      className: "select-coaching-rank-down-gamemode masters",
       onClick: chooseJoust,
       img: joustMasters,
       modeCoaching: "Joust coaching",
@@ -31,7 +31,7 @@ const chooseJoust = () => {
     },
     {
       id: 2,
-      className: "select-coaching-rank-gamemode-masters",
+      className: "select-coaching-rank-gamemode masters",
       onClick: chooseConquest,
       img: conquestMasters,
       modeCoaching: "Conquest coaching",
@@ -39,7 +39,7 @@ const chooseJoust = () => {
     },
     {
       id: 3,
-      className: "select-coaching-rank-down-gamemode-masters",
+      className: "select-coaching-rank-down-gamemode masters",
       onClick: chooseDuel,
       img: duelMasters,
       modeCoaching: "Duel coaching",

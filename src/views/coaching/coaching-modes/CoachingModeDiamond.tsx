@@ -22,7 +22,7 @@ const CoachingModeDiamond = (props: CoachingSelectMode) => {
   const cards = [
     {
       id: 1,
-      className:"select-coaching-rank-down-gamemode-diamond",
+      className:"select-coaching-rank-down-gamemode diamond",
       onClick: chooseJoust,
       src: joustDiamond,
       modeOfCoaching: "Joust coaching",
@@ -30,7 +30,7 @@ const CoachingModeDiamond = (props: CoachingSelectMode) => {
     },
     {
       id: 2,
-      className:"select-coaching-rank-gamemode-diamond",
+      className:"select-coaching-rank-gamemode diamond",
       onClick: chooseConquest,
       src: conquestDiamond,
       modeOfCoaching: "Conquest coaching",
@@ -38,7 +38,7 @@ const CoachingModeDiamond = (props: CoachingSelectMode) => {
     },
     {
       id: 3,
-      className: "select-coaching-rank-down-gamemode-diamond",
+      className: "select-coaching-rank-down-gamemode diamond",
       onClick: chooseDuel,
       src: duelDiamond,
       modeOfCoaching: "Duel coaching",

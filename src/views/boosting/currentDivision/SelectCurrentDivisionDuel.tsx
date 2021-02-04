@@ -1,7 +1,7 @@
 import React  from "react";
 
 import { SelectionProps } from "../BoostingModel";
-import {divisions, tiers} from "./currentDivisionUtils";
+import {divisionsDuel, tiers} from "./currentDivisionUtils";
 
 import "../BoostingViewStyles.scss";
 
@@ -13,12 +13,12 @@ const SelectCurrentDivisionDuel = (props: SelectionProps) => {
       previousStep,
     } = props;
 
-    const divisionChoose = divisions.map((division) => (
+    const divisionChoose = divisionsDuel.map((division) => (
       <div key={division.id} className="division">
         <span className="rank-text">{division.name}</span>
         <input
           type="checkbox"
-          className="choose_division"
+          className="choose-division"
           name="currentDivision"
           id="currentDivision"
           value={division.value}
@@ -30,7 +30,7 @@ const SelectCurrentDivisionDuel = (props: SelectionProps) => {
               ? division.imageOn
               : division.imageOff
           }
-          alt={division.name + "icon"}
+          alt={division.name + "icon"} className="select-boosting"
         />
       </div>
     ));
@@ -60,6 +60,7 @@ const SelectCurrentDivisionDuel = (props: SelectionProps) => {
         <span className="boosting-maintext">
           Choose your current division and tier:
         </span>
+        {valuesFormBoosting.error}
         <div className="current-division">{divisionChoose}</div>
         <div className="tier-container">{tierChoose}</div>
         <div className="navigation-buttons">

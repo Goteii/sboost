@@ -8,6 +8,8 @@ import silverConquestOff from "./conquest_silver_rank_off.png";
 import goldConquestOff from "./conquest_gold_rank_off.png";
 import platinumConquestOff from "./conquest_platinum_rank_off.png";
 import diamondConquestOff from "./conquest_diamond_rank_off.png";
+import mastersConquestOn from "./conquest_masters_rank.png";
+import mastersConquestOff from "./conquest_masters_rank_off.png";
 import bronzeJoustOn from "./joust_bronze_rank.png";
 import bronzeJoustOff from "./joust_bronze_rank_off.png";
 import silverJoustOn from "./joust_silver_rank.png";
@@ -18,6 +20,8 @@ import platinumJoustOn from "./joust_platinum_rank.png";
 import platinumJoustOff from "./joust_platinum_rank_off.png";
 import diamondJoustOn from "./joust_diamond_rank.png";
 import diamondJoustOff from "./joust_diamond_rank_off.png";
+import mastersJoustOn from "./joust_masters_rank.png";
+import mastersJoustOff from "./joust_masters_rank_off.png";
 import bronzeDuelOn from "./duel_bronze_rank.png";
 import bronzeDuelOff from "./duel_bronze_rank_off.png";
 import silverDuelOn from "./duel_silver_rank.png";
@@ -28,6 +32,8 @@ import platinumDuelOn from "./duel_platinum_rank.png";
 import platinumDuelOff from "./duel_platinum_rank_off.png";
 import diamondDuelOn from "./duel_diamond_rank.png";
 import diamondDuelOff from "./duel_diamond_rank_off.png";
+import mastersDuelOn from "./duel_masters_rank.png";
+import mastersDuelOff from "./duel_masters_rank_off.png";
 import boostingServiceSolo from "./type_of_service_booster_alone.png";
 import boostingServiceSoloOff from "./type_of_service_booster_alone_off.png";
 import boostingServiceDuo from "./type_of_service_booster_duo.png";
@@ -66,6 +72,12 @@ export {
   platinumDuelOff,
   diamondDuelOn,
   diamondDuelOff,
+  mastersDuelOn,
+  mastersDuelOff,
+  mastersConquestOn,
+  mastersConquestOff,
+  mastersJoustOn,
+  mastersJoustOff,
   boostingServiceSolo,
   boostingServiceSoloOff,
   boostingServiceDuo,
