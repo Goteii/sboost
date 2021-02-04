@@ -13,12 +13,13 @@
   align-items: center;
   width: 100%;
   justify-content: center;
+}
 
-  .error {
-    color: red;
-    position: relative;
-    display: flex;
-  }
+.error {
+  color: red;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .boosting-ranks-container {

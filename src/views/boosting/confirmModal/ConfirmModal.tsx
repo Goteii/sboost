@@ -61,12 +61,6 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
               </span>
             </span>
             <span className="values-modal">
-              Extras:
-              <span className="inserted-values">
-                {valuesFormBoosting.extras}
-              </span>
-            </span>
-            <span className="values-modal">
               Price:
               <span className="inserted-values">
                 {calculate(costCurrent, costFuture, modeCost, service)} €
