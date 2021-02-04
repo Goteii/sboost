@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter, Route } from "react-router-dom";
 
-import VideoView from "../video/VideoView";
+import FirstView from "../video/FirstView";
 import BoostingForm from "../boosting/BoostingForm";
 import EncourageView from "../encourage/EncourageView";
 import FooterView from "../footer/FooterView";
@@ -17,7 +17,7 @@ class MainPageView extends React.Component<any> {
     return (
       <div className="mainpage-container">
         <Navbar />
-        <VideoView />
+        <FirstView />
         <Route path="/boosting">
           <BoostingForm />
         </Route>
