@@ -1,0 +1,40 @@
+.firstview-container {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  background-image: url("../viewsImages/sboost-frontpage-image.png");
+  display: flex;
+}
+
+.firstview-text-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  bottom: 20%;
+
+  span {
+    font-family: "Rancho", cursive;
+    font-size: 4em;
+    color: white;
+    text-shadow: 2px 3px #000000;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .firstview-text-container {
+    justify-content: center;
+    span {
+      font-size: 3em;
+    }
+  }
+}
+
+@media screen and (max-width: 654px) {
+  .firstview-text-container {
+    justify-content: center;
+    span {
+      font-size: 2.5em;
+    }
+  }
+}
