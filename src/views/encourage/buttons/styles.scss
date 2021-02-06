@@ -1,6 +1,4 @@
-@mixin background-color {
-  background-color: rgb(57, 56, 134);
-}
+@import "../../../shared/styles/styles.scss";
 
 %button-style {
   position: relative;
@@ -8,7 +6,7 @@
   width: 90%;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 22.5vh;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 4em;
@@ -32,8 +30,17 @@
 
 .buttons-container {
   @include background-color;
+  display: flex;
   position: relative;
   width: 100%;
+}
+
+.btn-opinion {
+  width: 50%;
+}
+
+.btn-contact-btn {
+  width: 50%;
 }
 
 .button-opinion-button {
@@ -82,7 +89,14 @@
 @media screen and (max-width: 1400px) {
   .button-opinion-button,
   .button-contact-button {
-    height: 17.5vh;
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .button-opinion-button,
+  .button-contact-button {
+    height: 12.5vh;
   }
 }
 

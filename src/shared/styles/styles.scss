@@ -1,0 +1,36 @@
+@mixin background-color {
+  background-color: rgb(57, 56, 134);
+}
+
+@mixin background-color-darker {
+  background-color: rgb(42, 41, 100);
+}
+
+@mixin cards-color {
+  background-color: rgb(25, 24, 53);
+  color: rgb(221, 204, 204);
+}
+
+@mixin marginBtnText {
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+@mixin background-color-footer {
+  background-color: rgb(25, 24, 53);
+}
+
+@mixin font-style {
+  color: black;
+  text-shadow: 2px 2px 7px rgb(255, 255, 255);
+}
+
+@mixin headliners-style {
+  font-family: "Rancho", cursive;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}

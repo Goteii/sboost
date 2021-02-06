@@ -1,6 +1,8 @@
+@import "../../shared/styles/styles.scss";
+
 .boosting-container {
+  @include background-color;
   width: 100%;
-  background-color: #f4eeee;
   height: auto;
   padding-top: 3em;
   text-shadow: none;
@@ -157,7 +159,6 @@
   font-family: "Rancho", cursive;
   font-size: 3em;
   cursor: pointer;
-  background-color: #f4eeee;
 }
 
 .service-description {
@@ -276,10 +277,10 @@
 }
 
 .boosting-container-shadow {
+  @include background-color;
   width: 100%;
   height: 1000px;
   padding-top: 3em;
-  background-color: #f4eeee;
 }
 
 .boosting-modal-container {

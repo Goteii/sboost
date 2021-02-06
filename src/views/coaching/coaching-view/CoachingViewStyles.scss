@@ -1,10 +1,4 @@
-@mixin background-color {
-  background-color: rgb(57, 56, 134);
-}
-@mixin cards-color {
-  background-color: rgb(25, 24, 53);
-  color: rgb(221, 204, 204);
-}
+@import "../../../shared/styles/styles.scss";
 
 %width {
   width: 20em;

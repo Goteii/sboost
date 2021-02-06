@@ -41,8 +41,8 @@ const Photoslider = () => {
                 )
             })
         }
-        <button id="prevBtn" onClick={goPrev}><i className="fas fa-chevron-left" /> LEFT </button>
-        <button id="nextBtn" onClick={goNext}><i className="fas fa-chevron-right" />RIGHT</button>
+        <button id="prevBtn" onClick={goPrev}>&larr;</button>
+        <button id="nextBtn" onClick={goNext}>&rarr;</button>
         </div>
     )
 }

@@ -3,6 +3,8 @@ import React from "react";
 
 import Photoslider from "./photo-slider/Photoslider";
 import Buttons from "./buttons/ButtonsEncourage";
+import HowToOrder from "./how-to-order/HowToOrder";
+import Rules from './rules/Rules';
 
 import { badgeIcon } from "../viewsImages/ViewsImages";
 import {badges} from "./encourageUtils";
@@ -23,6 +25,7 @@ const badgeMapped = badges.map((badge) => (
 ));
 
 const contactText = <span className="encourage-contact-text">Do you have any questions?</span>
+const opinionText = <span className="encourage-opinion-text">Check our customers' opinions!</span>
 
 const EncourageView = () => {
   return (
@@ -30,12 +33,17 @@ const EncourageView = () => {
       <span className="encourage-view-container-text">Why would you choose us?</span>
         <div className="badges-container">{badgeMapped}</div>
 
-      <span className="slider-text">Take a brief look at boosters' ranks!</span>
+      <div className="carousel">
+        <span className="slider-text">Take a brief look at boosters' ranks!</span>
         <Photoslider />
+      </div>
+      
+      <Buttons contactText={contactText} opinionText={opinionText}/>
 
-      <span className="encourage-opinion-text">Check our customers' opinions!</span>
-
-      <Buttons contactText={contactText}/>
+      <div className="how-to-order">
+      <HowToOrder />
+      <Rules />
+      </div>
     </div>
   );
 };

@@ -1,6 +1,4 @@
-@mixin background-color {
-  background-color: rgb(25, 24, 53);
-}
+@import "../../shared/styles/styles.scss";
 
 .navbar_container {
   position: absolute;
@@ -91,7 +89,7 @@
 
 @media screen and (max-width: 768px) {
   .navbar_container {
-    @include background-color;
+    @include background-color-footer;
     position: fixed;
     margin: 0;
     width: 100vw;
@@ -117,7 +115,7 @@
     display: none;
   }
   .navbar_bottom {
-    @include background-color;
+    @include background-color-footer;
     position: fixed;
     flex-direction: column;
     height: 90vh;

@@ -4,9 +4,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  i {
-    font-size: 35px;
-  }
+  padding-bottom: 2em;
 }
 
 .slide-image {
@@ -22,7 +20,6 @@
 }
 
 %btn-styles {
-  background: red;
   position: absolute;
   transform: translateY(-50%);
   border: none;
@@ -34,6 +31,7 @@
   &:hover {
     color: rgb(0, 0, 0);
   }
+  font-size: 2.5em;
 }
 
 #prevBtn {
@@ -44,4 +42,35 @@
 #nextBtn {
   right: 20px;
   @extend %btn-styles;
+}
+
+@media screen and (max-width: 1500px) {
+  #prevBtn {
+    font-size: 1.75em;
+  }
+  #nextBtn {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #prevBtn {
+    font-size: 1.5em;
+    left: 10px;
+  }
+  #nextBtn {
+    right: 10px;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 764px) {
+  #prevBtn {
+    font-size: 1.25em;
+    left: 7.5px;
+  }
+  #nextBtn {
+    right: 7.5px;
+    font-size: 1.25em;
+  }
 }

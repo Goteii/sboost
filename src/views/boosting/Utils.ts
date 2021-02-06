@@ -43,7 +43,7 @@ export const modeCost: any = {
 export const typeOfService: any = {
   2: {
     index: 1,
-    cost: 1,
+    cost: 1.5,
   },
   1: {
     index: 2,
@@ -51,7 +51,7 @@ export const typeOfService: any = {
   },
   3: {
     index: 3,
-    cost: 1.5,
+    cost: 1,
   },
 };
 
