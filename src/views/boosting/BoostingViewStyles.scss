@@ -352,6 +352,13 @@
   }
 }
 
+label {
+  font-family: "Rancho", cursive;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+}
+
 @keyframes values-container {
   to {
     transform: translateX(0);

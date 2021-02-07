@@ -1,13 +1,13 @@
 @mixin background-color {
-  background-color: rgb(57, 56, 134);
+  background-color: rgb(67, 101, 212);
 }
 
 @mixin background-color-darker {
-  background-color: rgb(42, 41, 100);
+  background-color: rgb(45, 80, 168);
 }
 
 @mixin cards-color {
-  background-color: rgb(25, 24, 53);
+  background-color: rgb(10, 42, 129);
   color: rgb(221, 204, 204);
 }
 
@@ -17,7 +17,7 @@
 }
 
 @mixin background-color-footer {
-  background-color: rgb(25, 24, 53);
+  background-color: rgb(18, 34, 105);
 }
 
 @mixin font-style {

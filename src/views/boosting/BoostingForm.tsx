@@ -9,6 +9,7 @@ import SelectFutureDivisionJoust from "./futureDivision/SelectFutureDivisionJous
 import SelectFutureDivisionDuel from "./futureDivision/SelectFutureDivisionDuel";
 import TypeOfService from "./typeOfService/TypeOfService";
 import TypeOfServiceDuel from "./typeOfService/TypeOfServiceDuel";
+import BoostingAccDetails from "./accDetails/BoostingAccDetails";
 import ConfirmModal from "./confirmModal/ConfirmModal";
 import { baseInstance } from "../../api/instance";
 
@@ -23,6 +24,8 @@ class BoostingForm extends Component {
     typeOfService: 0,
     extras: 0,
     error: "",
+    loginDetails: "",
+    passwordDetails: "",
     moneyCounter: [],
   };
 
@@ -41,6 +44,8 @@ class BoostingForm extends Component {
         currentTierId: +this.state.currentTier,
         futureDivisionId: +this.state.futureDivision,
         futureTierId: +this.state.futureTier,
+        // loginDetails
+        // passwordDetails
       })
       .then((res) => console.log(res))
       .catch((e) => {
@@ -85,6 +90,11 @@ class BoostingForm extends Component {
       this.setState({error: errormessage});
       isProper = false;
     }
+    else if (step === 5 && +this.state.typeOfService !== 2 && !this.state.loginDetails && !this.state.passwordDetails) {
+      errormessage = <span className="error">You didnt pass account details</span>
+      this.setState({error: errormessage});
+      isProper = false;
+    }
     return isProper ? true : error;
   };
 
@@ -118,6 +128,16 @@ class BoostingForm extends Component {
     });
   };
 
+  insertLogin = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    this.setState({ loginDetails: value});
+  }
+
+  insertPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    this.setState({ passwordDetails: value});
+  }
+
   render() {
     const {
       step,
@@ -130,6 +150,8 @@ class BoostingForm extends Component {
       extras,
       error,
       moneyCounter,
+      loginDetails,
+      passwordDetails
     } = this.state;
     const valuesFormBoosting = {
       selectMode,
@@ -141,8 +163,9 @@ class BoostingForm extends Component {
       extras,
       error,
       moneyCounter,
+      loginDetails,
+      passwordDetails
     };
-    console.log(valuesFormBoosting);
     const costCurrentDivisionObj = {
       division: currentDivision,
       tier: currentTier,
@@ -253,7 +276,36 @@ class BoostingForm extends Component {
             />
           );
         }
-      case 5:
+        case 5:
+          if(+valuesFormBoosting.typeOfService !== 2) {
+            return (
+              <BoostingAccDetails 
+              nextStep={this.nextStep}
+              previousStep={this.prevStep}
+              insertLogin={this.insertLogin}
+              insertPassword={this.insertPassword}
+              valuesFormBoosting={valuesFormBoosting}
+              validateStep={this.validateStep}
+              />
+            )
+          }
+          else {
+            return (
+              <ConfirmModal
+              nextStep={this.nextStep}
+              previousStep={this.prevStep}
+              handleChange={this.handleChange}
+              valuesFormBoosting={valuesFormBoosting}
+              costCurrent={costCurrentDivisionObj}
+              costFuture={costFutureDivisionObj}
+              modeCost={modeCostObj}
+              service={serviceObj}
+              sendOrderToDb={this.sendOrderToDb}
+              validateStep={this.validateStep}
+            />
+            )
+          }
+      case 6:
         return (
           <ConfirmModal
             nextStep={this.nextStep}
