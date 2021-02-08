@@ -1,4 +1,7 @@
+@import "../../../shared/styles/styles.scss";
+
 .order-container {
+  @include background-color;
   position: relative;
   width: 100%;
 }
@@ -56,4 +59,38 @@
 .value {
   position: relative;
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 1200px) {
+  .order-text {
+    font-size: 2.5em;
+  }
+  .category {
+    font-size: 1.75em;
+  }
+  .value {
+    font-size: 1.25em;
+  }
+  .feedback {
+    .feedback-button {
+      font-size: 1.25em;
+    }
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .order-text {
+    font-size: 2em;
+  }
+  .category {
+    font-size: 1.25em;
+  }
+  .value {
+    font-size: 1em;
+  }
+  .feedback {
+    .feedback-button {
+      font-size: 1em;
+    }
+  }
 }

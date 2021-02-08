@@ -1,4 +1,7 @@
+@import "../../../shared/styles/styles.scss";
+
 .contact-container {
+  @include background-color;
   position: relative;
   width: 100%;
   display: flex;

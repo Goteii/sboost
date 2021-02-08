@@ -20,7 +20,7 @@ const BoostingAccDetails = (props: AccountDetailsProps) => {
         {valuesFormBoosting.error}
         <div className="current-division">
             <div className="login-details">
-                <label>Login</label>
+                <label className="label-boosting">Login</label>
             <input
                 name="loginDetails"
                 type="text"
@@ -31,7 +31,7 @@ const BoostingAccDetails = (props: AccountDetailsProps) => {
                 />
             </div>
             <div className="password-details">
-                <label>Password</label>
+                <label className="label-boosting">Password</label>
             <input
                 name="passwordDetails"
                 type="text"
