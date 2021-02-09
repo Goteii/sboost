@@ -89,7 +89,7 @@
 
 @media screen and (max-width: 768px) {
   .navbar_container {
-    @include background-color-footer;
+    background-color: $background-color-footer;
     position: fixed;
     margin: 0;
     width: 100vw;
@@ -115,7 +115,7 @@
     display: none;
   }
   .navbar_bottom {
-    @include background-color-footer;
+    background-color: $background-color-footer;
     position: fixed;
     flex-direction: column;
     height: 90vh;

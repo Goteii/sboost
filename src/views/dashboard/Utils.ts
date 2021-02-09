@@ -1,4 +1,4 @@
-export const dashboardUI = [ 
+export const dashboardUI: {id: number, link: string, text: string, target: string}[] = [ 
     {
         id: 1,
         link: "/dashboard/order",

@@ -1,7 +1,7 @@
 @import "../../shared/styles/styles.scss";
 
 .boosting-container {
-  @include background-color;
+  background-color: $background-color;
   width: 100%;
   height: auto;
   padding-top: 3em;
@@ -198,86 +198,8 @@
   font-size: 2.5em;
 }
 
-.boosting-container-extras {
-  width: 100%;
-  background-color: #f4eeee;
-  height: auto;
-  padding-top: 3em;
-  text-shadow: none;
-  padding-bottom: 5em;
-}
-.boosting-ranks-extras {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 7em;
-  padding-bottom: 14em;
-}
-.choose-extra {
-  position: relative;
-  background-color: #f4eeee;
-  border: 2px solid black;
-  border-radius: 10px;
-  height: 4em;
-  flex-basis: 5em;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(182, 178, 178);
-}
-
-.choose-extra:hover {
-  background-color: rgb(179, 231, 178);
-}
-
-.choose-extra-active {
-  position: relative;
-  background-color: #f4eeee;
-  border: 2px solid black;
-  border-radius: 10px;
-  height: 4em;
-  flex-basis: 5em;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(86, 204, 82);
-}
-
-.extras-input {
-  position: relative;
-  height: 4em;
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.extra-check-sign {
-  position: relative;
-  right: 1em;
-  top: 0.5em;
-}
-
-.boosting-extra-option {
-  display: flex;
-  justify-content: center;
-}
-.boosting-extra {
-  width: 45%;
-}
-
-.extra-description {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  font-family: "Rancho", cursive;
-  font-size: 1.6em;
-  margin-top: 3em;
-  text-align: center;
-  letter-spacing: 1.5px;
-  word-spacing: 2px;
-}
-
 .boosting-container-shadow {
-  @include background-color;
+  background-color: $background-color;
   width: 100%;
   height: 1000px;
   padding-top: 3em;

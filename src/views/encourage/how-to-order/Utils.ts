@@ -1,4 +1,4 @@
-export const orderSteps = [
+export const orderSteps: {id: number, text: string}[] = [
     {
         id: 1,
         text: "1. Register at our website."

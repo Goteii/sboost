@@ -25,6 +25,19 @@ export const divisionsCost: any = {
   }
 };
 
+// to fix that
+// interface modeCostInterface {
+//   index: number;
+//   cost: number;
+//   property: typeOfMode
+// }
+
+// enum typeOfMode {
+//   Conquest = 1,
+//   Joust,
+//   Duel
+// }
+
 export const modeCost: any = {
   2: {
     index: 1,

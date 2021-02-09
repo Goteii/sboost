@@ -29,7 +29,7 @@
 }
 
 .buttons-container {
-  @include background-color;
+  background-color: $background-color;
   display: flex;
   position: relative;
   width: 100%;

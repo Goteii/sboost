@@ -47,8 +47,8 @@ class DashboardView extends React.Component<any> {
       <div className="dashboard-container">
         <div className="dashboard-left-panel">
           <div className="username-holder">
-          You are logged in as<br/>  <span className="username">
-            <b>{this.state.username}</b></span>
+          You are logged in as <br/>  
+          <span className="username"><b>{this.state.username}</b></span>
           </div>
           
           {this.dashboardUIMapped}

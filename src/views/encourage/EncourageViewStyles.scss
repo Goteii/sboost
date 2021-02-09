@@ -1,7 +1,7 @@
 @import "../../shared/styles/styles.scss";
 
 .encourage-view-container {
-  @include background-color;
+  background-color: $background-color;
   position: relative;
   height: auto;
   width: 100%;
@@ -14,7 +14,7 @@
 }
 
 .badges-container {
-  @include background-color;
+  background-color: $background-color;
   flex-direction: row;
   width: 100%;
   margin-top: 40px;
@@ -50,18 +50,18 @@
 }
 
 .slider-text {
-  @include background-color-darker;
+  background-color: $background-color-darker;
   @include headliners-style;
   @include marginBtnText;
   padding-top: 0.25em;
 }
 
 .carousel {
-  @include background-color-darker;
+  background-color: $background-color-darker;
 }
 
 .how-to-order {
-  @include background-color-darker;
+  background-color: $background-color-darker;
 }
 
 .encourage-opinion-text {

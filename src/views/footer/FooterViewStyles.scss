@@ -1,7 +1,7 @@
 @import "../../shared/styles/styles.scss";
 
 .footer-container {
-  @include background-color-footer();
+  background-color: $background-color-footer();
   position: relative;
   height: auto;
   display: flex;

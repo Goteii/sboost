@@ -5,7 +5,7 @@
 }
 
 .coaching-container {
-  @include background-color;
+  background-color: $background-color;
   position: relative;
   width: 100%;
   height: auto;
@@ -15,7 +15,7 @@
 }
 
 .coaching-container-rank {
-  @include background-color;
+  background-color: $background-color;
   position: relative;
   width: 100%;
   height: auto;
@@ -25,7 +25,7 @@
 }
 
 .coaching-container-rank-3 {
-  @include background-color;
+  background-color: $background-color;
   position: relative;
   width: 100%;
   height: auto;

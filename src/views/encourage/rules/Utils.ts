@@ -1,4 +1,4 @@
-export const rules = [ 
+export const rules:{id: number, text: string}[] = [ 
     {
         id: 1,
         text: '1. Smite-boost.com might cancel the boosting service if customer plays rankeds on his account during the service'

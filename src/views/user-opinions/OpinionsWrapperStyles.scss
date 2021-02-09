@@ -1,7 +1,7 @@
 @import "../../shared/styles/styles.scss";
 
 .opinions-container {
-  @include background-color;
+  background-color: $background-color;
   position: relative;
   width: 100%;
   height: auto;
