@@ -85,7 +85,7 @@ const BoostingModeSelection = (props: BoostingModeSelectionProps) => {
         <span className="boosting-maintext">
           Choose mode you wish to get higher rank at:
         </span>
-        {valuesFormBoosting.error}
+        <span className="error">{valuesFormBoosting.error}</span>
         <div className="boosting-ranks-container">{modeOptions}</div>
         <div className="navigation-buttons">
           <Link to="/">

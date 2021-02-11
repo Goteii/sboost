@@ -13,6 +13,8 @@ import BoostingAccDetails from "./accDetails/BoostingAccDetails";
 import ConfirmModal from "./confirmModal/ConfirmModal";
 import { baseInstance } from "../../api/instance";
 
+import "./BoostingViewStyles.scss";
+
 class BoostingForm extends Component {
   state = {
     step: 1,
@@ -57,41 +59,41 @@ class BoostingForm extends Component {
     const { step } = this.state;
     let { error } = this.state;
     let isProper: boolean = true;
-    let errormessage: object;
+    let errormessage: string;
 
     if (step === 1 && !this.state.selectMode) {
-      errormessage = <span className="error"> You didnt choose mode</span>
+      errormessage =  "You didnt choose mode"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 2 && !this.state.currentDivision) {
-      errormessage = <span className="error">You didnt choose your current division</span>
+      errormessage = "You didnt choose your current division"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 2 && !this.state.currentTier) {
-      errormessage = <span className="error">You didnt choose your current tier of division</span>
+      errormessage = "You didnt choose your current tier of division"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 3 && !this.state.futureDivision) {
-      errormessage = <span className="error">You didnt choose your desired division</span>
+      errormessage = "You didnt choose your desired division"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 3 && !this.state.futureTier) {
-      errormessage = <span className="error">You didnt choose your desired tier of division</span>
+      errormessage = "You didnt choose your desired tier of division"
       this.setState({error: errormessage});
       isProper = false;
     }
     else if (step === 3 && +this.state.futureDivision < +this.state.currentDivision) {
-      errormessage = <span className="error">You selected lower division than your current one</span>
+      errormessage = "You selected lower division than your current one"
       this.setState({error: errormessage});
       isProper = false;
     }
      else if (step === 4 && !this.state.typeOfService) {
-      errormessage = <span className="error">You didnt choose type of service</span>
+      errormessage = "You didnt choose type of service"
       this.setState({error: errormessage});
       isProper = false;
     }
     else if (step === 5 && +this.state.typeOfService !== 2 && !this.state.loginDetails && !this.state.passwordDetails) {
-      errormessage = <span className="error">You didnt pass account details</span>
+      errormessage = "You didnt pass account details"
       this.setState({error: errormessage});
       isProper = false;
     }
@@ -101,7 +103,6 @@ class BoostingForm extends Component {
   nextStep = () => {
     const { step } = this.state;
     const isChecked = this.validateStep();
-    console.log(this.state.error);
     if (isChecked === true) {
       this.setState({
         step: step + 1,

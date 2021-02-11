@@ -60,7 +60,7 @@ const SelectCurrentDivisionDuel = (props: SelectionProps) => {
         <span className="boosting-maintext">
           Choose your current division and tier:
         </span>
-        {valuesFormBoosting.error}
+        <span className="error">{valuesFormBoosting.error}</span>
         <div className="current-division">{divisionChoose}</div>
         <div className="tier-container">{tierChoose}</div>
         <div className="navigation-buttons">
