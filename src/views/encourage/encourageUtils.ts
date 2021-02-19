@@ -1,4 +1,4 @@
-export const badges = [
+export const badges: {id: number, badgeHeader: string, badgeText: string}[] = [
     {
       id: 1,
       badgeHeader: "Safety",

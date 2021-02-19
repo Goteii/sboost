@@ -60,7 +60,7 @@ const SelectFutureDivisionJoust = (props:SelectionProps) => {
         <span className="boosting-maintext">
           Choose division and tier you wish to achieve:
         </span>
-        {valuesFormBoosting.error}
+        <span className="error"> {valuesFormBoosting.error}</span>
         <div className="current-division">{divisionChoose}</div>
         <div className="tier-container">{tierChoose}</div>
         <div className="navigation-buttons">

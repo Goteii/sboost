@@ -1,0 +1,39 @@
+@import "../../../shared/styles/styles.scss";
+
+.rules-container {
+  position: relative;
+  font-family: "Rancho", cursive;
+}
+
+.rules-maintext {
+  @include headliners-style;
+}
+
+.rules {
+  position: relative;
+  font-size: 2em;
+  list-style-type: none;
+
+  .rule {
+    padding: 1em;
+    text-shadow: 1px 1px 10px white;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .rules-maintext {
+    font-size: 2.5em;
+  }
+  .rules {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rules-maintext {
+    font-size: 2em;
+  }
+  .rules {
+    font-size: 1.25em;
+  }
+}

@@ -9,8 +9,11 @@ import SelectFutureDivisionJoust from "./futureDivision/SelectFutureDivisionJous
 import SelectFutureDivisionDuel from "./futureDivision/SelectFutureDivisionDuel";
 import TypeOfService from "./typeOfService/TypeOfService";
 import TypeOfServiceDuel from "./typeOfService/TypeOfServiceDuel";
+import BoostingAccDetails from "./accDetails/BoostingAccDetails";
 import ConfirmModal from "./confirmModal/ConfirmModal";
 import { baseInstance } from "../../api/instance";
+
+import "./BoostingViewStyles.scss";
 
 class BoostingForm extends Component {
   state = {
@@ -23,6 +26,8 @@ class BoostingForm extends Component {
     typeOfService: 0,
     extras: 0,
     error: "",
+    loginDetails: "",
+    passwordDetails: "",
     moneyCounter: [],
   };
 
@@ -41,6 +46,8 @@ class BoostingForm extends Component {
         currentTierId: +this.state.currentTier,
         futureDivisionId: +this.state.futureDivision,
         futureTierId: +this.state.futureTier,
+        // loginDetails
+        // passwordDetails
       })
       .then((res) => console.log(res))
       .catch((e) => {
@@ -52,36 +59,41 @@ class BoostingForm extends Component {
     const { step } = this.state;
     let { error } = this.state;
     let isProper: boolean = true;
-    let errormessage: object;
+    let errormessage: string;
 
     if (step === 1 && !this.state.selectMode) {
-      errormessage = <span className="error"> You didnt choose mode</span>
+      errormessage =  "You didnt choose mode"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 2 && !this.state.currentDivision) {
-      errormessage = <span className="error">You didnt choose your current division</span>
+      errormessage = "You didnt choose your current division"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 2 && !this.state.currentTier) {
-      errormessage = <span className="error">You didnt choose your current tier of division</span>
+      errormessage = "You didnt choose your current tier of division"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 3 && !this.state.futureDivision) {
-      errormessage = <span className="error">You didnt choose your desired division</span>
+      errormessage = "You didnt choose your desired division"
       this.setState({error: errormessage});
       isProper = false;
     } else if (step === 3 && !this.state.futureTier) {
-      errormessage = <span className="error">You didnt choose your desired tier of division</span>
+      errormessage = "You didnt choose your desired tier of division"
       this.setState({error: errormessage});
       isProper = false;
     }
     else if (step === 3 && +this.state.futureDivision < +this.state.currentDivision) {
-      errormessage = <span className="error">You selected lower division than your current one</span>
+      errormessage = "You selected lower division than your current one"
       this.setState({error: errormessage});
       isProper = false;
     }
      else if (step === 4 && !this.state.typeOfService) {
-      errormessage = <span className="error">You didnt choose type of service</span>
+      errormessage = "You didnt choose type of service"
+      this.setState({error: errormessage});
+      isProper = false;
+    }
+    else if (step === 5 && +this.state.typeOfService !== 2 && !this.state.loginDetails && !this.state.passwordDetails) {
+      errormessage = "You didnt pass account details"
       this.setState({error: errormessage});
       isProper = false;
     }
@@ -91,7 +103,6 @@ class BoostingForm extends Component {
   nextStep = () => {
     const { step } = this.state;
     const isChecked = this.validateStep();
-    console.log(this.state.error);
     if (isChecked === true) {
       this.setState({
         step: step + 1,
@@ -118,6 +129,16 @@ class BoostingForm extends Component {
     });
   };
 
+  insertLogin = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    this.setState({ loginDetails: value});
+  }
+
+  insertPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    this.setState({ passwordDetails: value});
+  }
+
   render() {
     const {
       step,
@@ -130,6 +151,8 @@ class BoostingForm extends Component {
       extras,
       error,
       moneyCounter,
+      loginDetails,
+      passwordDetails
     } = this.state;
     const valuesFormBoosting = {
       selectMode,
@@ -141,8 +164,9 @@ class BoostingForm extends Component {
       extras,
       error,
       moneyCounter,
+      loginDetails,
+      passwordDetails
     };
-    console.log(valuesFormBoosting);
     const costCurrentDivisionObj = {
       division: currentDivision,
       tier: currentTier,
@@ -253,7 +277,36 @@ class BoostingForm extends Component {
             />
           );
         }
-      case 5:
+        case 5:
+          if(+valuesFormBoosting.typeOfService !== 2) {
+            return (
+              <BoostingAccDetails 
+              nextStep={this.nextStep}
+              previousStep={this.prevStep}
+              insertLogin={this.insertLogin}
+              insertPassword={this.insertPassword}
+              valuesFormBoosting={valuesFormBoosting}
+              validateStep={this.validateStep}
+              />
+            )
+          }
+          else {
+            return (
+              <ConfirmModal
+              nextStep={this.nextStep}
+              previousStep={this.prevStep}
+              handleChange={this.handleChange}
+              valuesFormBoosting={valuesFormBoosting}
+              costCurrent={costCurrentDivisionObj}
+              costFuture={costFutureDivisionObj}
+              modeCost={modeCostObj}
+              service={serviceObj}
+              sendOrderToDb={this.sendOrderToDb}
+              validateStep={this.validateStep}
+            />
+            )
+          }
+      case 6:
         return (
           <ConfirmModal
             nextStep={this.nextStep}

@@ -1,14 +1,7 @@
-@mixin background-color {
-  background-color: rgb(25, 24, 53);
-}
-
-@mixin font-style {
-  color: black;
-  text-shadow: 2px 2px 7px rgb(255, 255, 255);
-}
+@import "../../shared/styles/styles.scss";
 
 .footer-container {
-  @include background-color();
+  background-color: $background-color-footer();
   position: relative;
   height: auto;
   display: flex;

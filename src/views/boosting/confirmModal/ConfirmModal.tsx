@@ -21,7 +21,7 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
       <div className="boosting-container-shadow">
         <div className="boosting-modal-container">
           <div className="modal-upper-check">
-            <b>Check if information given matches with reality: </b>
+            <b>Check if given information matches with reality: </b>
           </div>
           <div className="values-container">
             <span className="values-modal">
@@ -79,7 +79,7 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
               action="https://www.paypal.com/cgi-bin/webscr"
               method="post"
               target="_top"
-              style={{ backgroundColor: "#f4eeee" }}
+              style={{ backgroundColor: "#393886" }}
               onSubmit={sendOrderToDb}
             >
               <input type="hidden" name="cmd" value="_xclick" />
@@ -111,7 +111,7 @@ const ConfirmModal = (props: SelectionPropsCalculation) => {
                 src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif"
                 name="submit"
                 alt="PayPal – The safer, easier way to pay online!"
-                style={{ backgroundColor: "#f4eeee" }}
+                style={{ backgroundColor: "#393886" }}
               />
               <img
                 alt=""

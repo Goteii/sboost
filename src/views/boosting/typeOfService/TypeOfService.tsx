@@ -38,7 +38,7 @@ const TypeOfService = (props: SelectionProps) => {
     return (
       <div className="boosting-container">
         <span className="boosting-maintext">Choose type of service:</span>
-        {valuesFormBoosting.error}
+        <span className="error">{valuesFormBoosting.error}</span>
         <div className="boosting-ranks-service">{chooseTypeOfService}</div>
         <div className="navigation-buttons">
           <div className="prev-button" onClick={previousStep}>

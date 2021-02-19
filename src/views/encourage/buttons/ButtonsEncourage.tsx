@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 
 import "./styles.scss";
 
-const ButtonsEncourage = ({contactText}: any) => {
+const ButtonsEncourage = ({contactText, opinionText}: any) => {
     return (
         <div className="buttons-container">
+            <div className="btn-opinion">
+            {opinionText}
             <div className="button-opinion-button">
                 <div className="btn-contact">
                 <Link to="opinions"  className="btn-contact-link">
@@ -14,6 +16,8 @@ const ButtonsEncourage = ({contactText}: any) => {
                     </Link>
                 </div>
             </div>
+            </div>
+            <div className="btn-contact-btn">
             {contactText}
             <div className="button-contact-button">
             <div className="btn-contact">
@@ -22,6 +26,7 @@ const ButtonsEncourage = ({contactText}: any) => {
                         Contact us!
                     </a>
                 </div>
+            </div>
             </div>
         </div>
     )

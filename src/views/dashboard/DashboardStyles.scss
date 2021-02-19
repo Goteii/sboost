@@ -1,26 +1,41 @@
+@import "../../shared/styles/styles.scss";
+
 .dashboard-container {
+  @include dashboard-nav-panel;
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f4eeee;
 }
 
 .dashboard-left-panel {
   position: relative;
   width: 15%;
-  height: 85%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   justify-content: space-between;
-  border-right: 1px solid #000000;
 
   .username-holder {
-    margin-top: 3em;
+    margin-top: 1.25em;
     font-size: 2em;
     font-family: "Rancho", cursive;
     text-align: center;
+
+    span {
+      font-size: 1.25em;
+    }
+  }
+
+  .logout-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+
+    button {
+      border: none;
+      padding: 20px 30px;
+    }
   }
 
   .account-details-container {
@@ -39,65 +54,29 @@
 .dashboard-display-panel {
   position: relative;
   width: 85%;
-  height: 85%;
   display: flex;
   flex-direction: row;
   font-family: "Rancho", cursive;
 }
 
-.dashboard-left-panel-button-space {
+.button-container {
   position: relative;
-  width: 15%;
-  height: 15%;
-  display: flex;
+  align-items: center;
   justify-content: center;
+  cursor: pointer;
+  display: flex;
+  background-color: rgb(105, 148, 204);
+  border-top-right-radius: 20px;
+  padding: 1.25em;
 
-  .logout-button-container {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    align-self: center;
-    text-align: center;
+  .button-text {
     font-family: "Rancho", cursive;
-    font-size: 2.2em;
-    padding-top: 0.25em;
-
-    .button-logout {
-      position: relative;
-      border-radius: 0;
-      border: none;
-      background-color: #494747;
-      color: #ffffff;
-      font-family: "Rancho", cursive;
-      font-size: 0.5em;
-      border-radius: 15px;
-      box-shadow: 0px 2px 27px 0px rgb(56, 56, 56);
-      cursor: pointer;
-    }
+    font-size: 1.5em;
   }
 }
 
-.dashboard-bottom-panel {
-  position: relative;
-  width: 85%;
-  height: 15%;
-  display: flex;
-  border-top: 1px solid #000000;
-
-  .button-container {
-    position: relative;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    display: flex;
-
-    .button-text {
-      font-family: "Rancho", cursive;
-      font-size: 2.5em;
-      margin-left: 0.25em;
-    }
-  }
+.button-container:nth-child(2n) {
+  background-color: rgb(53, 53, 150);
 }
 
 .button-link {
@@ -107,4 +86,52 @@
 
 .button-link:hover {
   color: gold;
+}
+
+@media screen and (max-width: 1300px) {
+  .button-container {
+    padding: 0.9em;
+  }
+  .dashboard-left-panel {
+    .username-holder {
+      font-size: 1.5em;
+    }
+    .logout-button-container {
+      button {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .button-container {
+    padding: 0.6em;
+  }
+  .dashboard-left-panel {
+    .username-holder {
+      font-size: 1.3em;
+    }
+    .logout-button-container {
+      button {
+        padding: 12.5px 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .button-container {
+    padding: 0.4em;
+  }
+  .dashboard-left-panel {
+    .username-holder {
+      font-size: 1.3em;
+    }
+    .logout-button-container {
+      button {
+        padding: 12.5px 15px;
+      }
+    }
+  }
 }

@@ -38,7 +38,7 @@ const TypeOfServiceDuel = (props: SelectionProps) => {
     return (
       <div className="boosting-container">
         <span className="boosting-maintext">Choose type of service:</span>
-        {valuesFormBoosting.error}
+        <span className="error"> {valuesFormBoosting.error}</span>
         <div className="service-holder-duel">{chooseTypeOfService}</div>
         <div className="navigation-buttons">
           <div className="prev-button" onClick={previousStep}>

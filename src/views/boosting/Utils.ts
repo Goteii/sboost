@@ -1,57 +1,86 @@
+enum typeOfDivision {
+Bronze = 1,
+Silver,
+Gold,
+Platinum,
+Diamond,
+Masters
+}
+
 export const divisionsCost: any = {
-  1: {
+  [typeOfDivision.Bronze]: {
     index: 1,
     cost: 7,
   },
-  2: {
+  [typeOfDivision.Silver]: {
     index: 2,
     cost: 10,
   },
-  3: {
+  [typeOfDivision.Gold]: {
     index: 3,
     cost: 13,
   },
-  4: {
+  [typeOfDivision.Platinum]: {
     index: 4,
     cost: 18,
   },
-  5: {
+  [typeOfDivision.Diamond]: {
     index: 5,
     cost: 24,
   },
-  6: {
+  [typeOfDivision.Masters]: {
     index: 6,
     cost: 150
   }
 };
 
+// dunno how to define direct props of object. Example: modeCost = {2: {index:1, cost:1}}.
+// 2 has been replaced by typeOfMode.Joust but how can i define that in typescript
+// interface modeCostInterface {
+//   index: number;
+//   cost: number;
+// }
+
+enum typeOfMode {
+  Conquest = 1,
+  Joust,
+  Duel
+}
+
+enum typeOfServiceEnum {
+  SoloBoosting = 1,
+  WithOwner,
+  DuoTripleBoost
+}
+
+
 export const modeCost: any = {
-  2: {
+  [typeOfMode.Joust]: {
     index: 1,
     cost: 1,
   },
-  1: {
+  [typeOfMode.Conquest]: {
     index: 2,
     cost: 1,
   },
-  3: {
+  [typeOfMode.Duel]: {
     index: 3,
     cost: 1,
   },
 };
 
 export const typeOfService: any = {
-  2: {
+  [typeOfServiceEnum.WithOwner]: {
     index: 1,
-    cost: 1,
+    cost: 1.5,
   },
-  1: {
+  [typeOfServiceEnum.SoloBoosting]: {
     index: 2,
     cost: 1,
   },
-  3: {
+  [typeOfServiceEnum.DuoTripleBoost]: {
     index: 3,
-    cost: 1.5,
+    cost: 1,
   },
 };
 

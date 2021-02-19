@@ -1,9 +1,7 @@
-@mixin background-color {
-  background-color: rgb(57, 56, 134);
-}
+@import "../../shared/styles/styles.scss";
 
 .about-container {
-  @include background-color;
+  background-color: $background-color;
   position: relative;
   width: 100%;
   height: auto;
@@ -23,6 +21,13 @@
 
 .about-description {
   display: flex;
+
+  ul {
+    padding-inline-start: 0;
+    div:nth-child(2n) {
+      background-color: $background-color-darker;
+    }
+  }
 }
 
 .description-headers {

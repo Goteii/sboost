@@ -9,11 +9,7 @@ import Order from "./user-orders/UserOrders";
 
 import { getSessionStorageToken } from "../../shared/helpers/storageHelpers";
 
-import OrderImage from "./image/order.png";
-import CoachImage from "./image/coach.png";
-import BoostImage from "./image/boost.png";
-import RateImage from "./image/rate.png";
-import ContactImage from "./image/contact.png";
+import {dashboardUI} from "./Utils";
 
 import "./DashboardStyles.scss";
 
@@ -36,17 +32,31 @@ class DashboardView extends React.Component<any> {
     this.props.history.push("/");
   };
 
+  dashboardUIMapped = dashboardUI.map((category) => ( 
+        <div className="button-container" key={category.id}>
+            <div className="button-text-div">
+              <Link to={category.link} target={category.target} className="button-link">
+                <span className="button-text">{category.text}</span>
+              </Link>
+            </div>
+          </div>
+  ))
+
   render() {
     return (
       <div className="dashboard-container">
         <div className="dashboard-left-panel">
           <div className="username-holder">
-            <span className="username">{this.state.username}</span>
+          You are logged in as <br/>  
+          <span className="username"><b>{this.state.username}</b></span>
           </div>
-          <div className="account-details-container">
-            <Link to="/dashboard" className="button-link">
-              Account details
-            </Link>
+          
+          {this.dashboardUIMapped}
+
+          <div className="logout-button-container">
+            <button className="button-logout" onClick={this.logout}>
+              Logout
+            </button>
           </div>
         </div>
 
@@ -78,67 +88,6 @@ class DashboardView extends React.Component<any> {
                 id={this.state.userID}
               />
             )}
-        </div>
-
-        <div className="dashboard-left-panel-button-space">
-          <div className="logout-button-container">
-            <button className="button-logout" onClick={this.logout}>
-              Logout
-            </button>
-          </div>
-        </div>
-
-        <div className="dashboard-bottom-panel">
-          <div className="button-container">
-            <div className="button-image">
-              <img src={OrderImage} alt="order" height="90px" />
-            </div>
-            <div className="button-text-div">
-              <Link to="/dashboard/order" className="button-link">
-                <span className="button-text">Your orders</span>
-              </Link>
-            </div>
-          </div>
-          <div className="button-container">
-            <div className="button-image">
-              <img src={CoachImage} alt="order" height="90px" />
-            </div>
-            <div className="button-text-div">
-              <Link to="/coaching" target="_blank" className="button-link">
-                <span className="button-text">Buy coaching</span>
-              </Link>
-            </div>
-          </div>
-          <div className="button-container">
-            <div className="button-image">
-              <img src={BoostImage} alt="order" height="90px" />
-            </div>
-            <div className="button-text-div">
-              <Link to="/boosting" target="_blank" className="button-link">
-                <span className="button-text">Buy boosting</span>
-              </Link>
-            </div>
-          </div>
-          <div className="button-container">
-            <div className="button-image">
-              <img src={ContactImage} alt="order" height="85px" />
-            </div>
-            <div className="button-text-div">
-              <Link to="/dashboard/contact" className="button-link">
-                <span className="button-text">Contact us</span>
-              </Link>
-            </div>
-          </div>
-          <div className="button-container">
-            <div className="button-image">
-              <img src={RateImage} alt="order" height="90px" />
-            </div>
-            <div className="button-text-div">
-              <Link to="/dashboard/opinion" className="button-link">
-                <span className="button-text">Rate us</span>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     );
