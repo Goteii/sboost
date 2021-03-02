@@ -7,7 +7,7 @@ import ClickableStars from "../../../shared/components/stars/ClickableStars";
 
 import "./OpinionStyles.scss";
 
-const Opinion = (props: any) => {
+const Opinion = () => {
   const [opinion, setOpinion] = useState("");
   const [rating, setRating] = useState(0);
 
@@ -26,6 +26,7 @@ const Opinion = (props: any) => {
         rating: rating
       }
       await createOpinion(newOpinion);
+      console.log(newOpinion);
     }
     catch(e) {
       console.log(e);

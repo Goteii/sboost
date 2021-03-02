@@ -3,10 +3,12 @@
 .rules-container {
   position: relative;
   font-family: "Rancho", cursive;
+  background-color: $background-color;
 }
 
 .rules-maintext {
   @include headliners-style;
+  padding-top: 0.75em;
 }
 
 .rules {

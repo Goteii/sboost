@@ -87,6 +87,11 @@ class BoostingForm extends Component {
       this.setState({error: errormessage});
       isProper = false;
     }
+    else if (step === 3 && +this.state.futureDivision === +this.state.currentDivision && +this.state.currentTier < +this.state.futureTier) {
+      errormessage = "You selected lower tier than your current one"
+      this.setState({error: errormessage});
+      isProper = false;
+    }
      else if (step === 4 && !this.state.typeOfService) {
       errormessage = "You didnt choose type of service"
       this.setState({error: errormessage});
@@ -119,7 +124,7 @@ class BoostingForm extends Component {
     });
   };
 
-  handleChange = (e: any) => {
+  handleChange = (e:any) => {
     const {
       target: { value, name },
     } = e;
