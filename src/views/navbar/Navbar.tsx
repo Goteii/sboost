@@ -6,9 +6,11 @@ import RegLogModal from "../reg-log-modal/RegLogModal";
 
 import { getLocalStorageToken } from "../../shared/helpers/storageHelpers";
 
+import {navLinks} from './utils';
+
 import { sbLogo, fbLogo, twitterLogoWhite } from "../../shared/images/SharedIcons";
 
-import "./NavbarStyles.scss";
+import "./styles.scss";
 
  
 
@@ -51,7 +53,14 @@ const Navbar = () => {
         mobileMenu?.classList.toggle('toggle');  
       }
   
-      
+      const linksMapped = navLinks.map(link => (
+        <div className="navbar_bottom-button" key={link.id}>
+          <Link to={link.linkTo} className="navbar-link">
+            {link.text}
+          </Link>
+        </div>
+      ))
+
     return (
       <div>
         <div className="navbar_container">
@@ -88,26 +97,8 @@ const Navbar = () => {
                 </span>
                 {showModal ? <RegLogModal onClose={handleShowModal} /> : null}
               </div>
-              <div className="navbar_bottom-button">
-                <Link to="/boosting" className="navbar-link">
-                  Buy boosting
-                </Link>
-              </div>
-              <div className="navbar_bottom-button">
-                <Link to="/coaching" className="navbar-link">
-                  Buy coaching
-                </Link>
-              </div>
-              <div className="navbar_bottom-button">
-                <Link to="/opinions" className="navbar-link">
-                  Opinions
-                </Link>
-              </div>
-              <div className="navbar_bottom-button">
-                <Link to="/about" className="navbar-link">
-                  About us
-                </Link>
-              </div>
+              
+              {linksMapped}
         
             </div>
   

@@ -1,12 +1,11 @@
 import React from "react";
 
-import "./FirstViewStyles.scss";
+import classes from "./styles.module.scss";
 
 const FirstView = () => {
-
   return (
-    <div className="firstview-container">
-      <div className="firstview-text-container">
+    <div className={classes.container}>
+      <div className={classes.text}>
         <span> Welcome to the best boosting-service in smite!</span>
       </div>
       </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import {aboutObj} from "./Utils";
 
-import "./AboutViewStyles.scss";
+import "./styles.scss";
 
 const AboutView = () => {
   useEffect(() => {
@@ -23,7 +23,7 @@ const AboutView = () => {
     return (
       <div className="about-container">
         <div className="about-maintext">
-          <span className="maintext">About us!</span>
+          <span>About us!</span>
         </div>
         <div className="about-description">
           <ul className="description-list">

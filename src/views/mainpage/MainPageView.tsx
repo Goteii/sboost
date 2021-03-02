@@ -10,12 +10,13 @@ import AboutView from "../about/AboutView";
 import CoachingForm from "../coaching/CoachingForm";
 import OpinionsView from "../user-opinions/OpinionsWrapper";
 
-import "./MainPageViewStyles.scss";
+import classes from "./styles.module.scss";
 
 class MainPageView extends React.Component<any> {
+
   render() {
     return (
-      <div className="mainpage-container">
+      <div className={classes.container}>
         <Navbar />
         <FirstView />
         <Route path="/boosting">

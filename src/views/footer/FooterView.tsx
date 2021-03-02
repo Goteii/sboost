@@ -1,73 +1,65 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {homeLinksArr} from "./utils";
+import {homeLinksArr, social, follow} from "./utils";
 
-import { fbFooterLogo, gmailLogo, sbLogo, twitterLogo } from "../../shared/images/SharedIcons";
+import { sbLogo } from "../../shared/images/SharedIcons";
 
-
-import "./FooterViewStyles.scss";
+import classes from "./styles.module.scss";
 
 const FooterView = () => {
 
   const homeLinks = homeLinksArr.map((homeLink) => (
-    <li key={homeLink.id} className="link">
-      <Link to={homeLink.linkTo} className="footer-link">
+    <li key={homeLink.id} className={classes.link}>
+      <Link to={homeLink.linkTo} className={classes.link}>
         <span> {homeLink.text} </span>
       </Link>
     </li>
-  ))
+  ));
+
+  const socialMapped = social.map(social => (
+    <li key={social.id}>
+      <a href={social.linkTo}>
+        <img src={social.imgSrc} alt={social.altText} />
+      </a>
+    </li>
+  ));
+
+  const followMapped = follow.map(follow => (
+    <li key={follow.id}>
+      <a href={follow.linkTo}>
+        <img src={follow.imgSrc} alt={follow.altText} />
+        </a>
+    </li>
+  ));
 
   return (
-    <div className="footer-container">
-      <div className="footer-logo">
+    <div className={classes.container}>
+      <div className={classes.logo}>
         <Link to="/">
-          <img src={sbLogo} alt="Footer logo" className="logo"/>
+          <img src={sbLogo} alt="smite-boost-logo" className={classes.logo}/>
         </Link>
         <span>
           Getting higher rank was never easier..
         </span>
       </div>
 
-      <ul className="footer-mainpage-links">
+      <ul className={classes.links}>
         <span> Home Links </span>
           {homeLinks}
       </ul>
       
-      <div className="footer-social">
+      <div className={classes.social}>
         <span>You can contact us anytime..</span>
-        <ul className="icons">
-          <li className="contact" id="fb">
-            <a href="https://www.facebook.com/sbsmiteboost/">
-              <img src={fbFooterLogo} alt="fb_logo" />
-            </a>
-          </li>
-          <li className="contact" id="twitter">
-            <a href="https://twitter.com/BoostSmite">
-              <img src={twitterLogo} alt="twitter_logo" />
-            </a>
-          </li>
-          <li className="contact" id="gmail">
-            <a href="mailto:smiteboostrank@gmail.com?subject=Smite%20Boosting">
-            <img src={gmailLogo} alt="gmail_logo" />
-            </a>
-          </li>
+        <ul className={classes.icons}>
+          {socialMapped}
         </ul>
       </div>
 
-      <div className="footer-follow">
+      <div className={classes.follow}>
         <span>and follow us to be up-to-date!</span>
-        <ul className="icons">
-          <li className="follow">
-            <a href="https://www.facebook.com/sbsmiteboost/">
-              <img src={fbFooterLogo} alt="fb_logo" />
-            </a>
-          </li>
-          <li className="follow">
-            <a href="https://twitter.com/BoostSmite">
-              <img src={twitterLogo} alt="twitter_logo" />
-            </a>
-          </li>
+        <ul className={classes.icons}>
+            {followMapped}
         </ul>
       </div>
 

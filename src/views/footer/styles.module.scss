@@ -1,6 +1,6 @@
 @import "../../shared/styles/styles.scss";
 
-.footer-container {
+.container {
   background-color: $background-color-footer();
   position: relative;
   height: auto;
@@ -9,7 +9,7 @@
   justify-content: space-around;
 }
 
-.footer-logo {
+.logo {
   flex-basis: 5%;
   position: relative;
   align-self: center;
@@ -17,13 +17,13 @@
   flex-wrap: wrap;
 }
 
-.footer-logo span {
+.logo span {
   color: white;
   font-family: "Rancho", cursive;
   text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);
 }
 
-.footer-mainpage-links {
+.links {
   @include font-style();
   list-style-type: none;
   font-family: "Rancho", cursive;
@@ -31,26 +31,27 @@
   padding: 10px;
   font-size: 3em;
 
-  .footer-link {
+  .link {
     text-decoration: none;
     @include font-style();
   }
 }
 
-.footer-mainpage-links li {
+.links li {
   padding-top: 0.5em;
   font-size: 0.45em;
   font-weight: bold;
 }
 
-.footer-social {
+.social {
   @include font-style();
   position: relative;
   font-family: "Rancho", cursive;
   font-size: 2.5em;
   align-self: center;
 }
-.footer-follow {
+
+.follow {
   @include font-style();
   position: relative;
   font-family: "Rancho", cursive;
@@ -76,16 +77,16 @@
   .logo {
     max-width: 100px;
   }
-  .footer-mainpage-links {
+  .links {
     font-size: 1.9em;
   }
   .link span {
     font-size: 1.1em;
   }
-  .footer-social {
+  .social {
     font-size: 1.7em;
   }
-  .footer-follow {
+  .follow {
     font-size: 1.7em;
   }
   .icons img {
@@ -97,19 +98,19 @@
   .logo {
     max-width: 80px;
   }
-  .footer-logo span {
+  .logo span {
     font-size: 0.9em;
   }
-  .footer-mainpage-links {
+  .links {
     font-size: 2em;
   }
   .link span {
     font-size: 1.1em;
   }
-  .footer-social {
+  .social {
     font-size: 1.5em;
   }
-  .footer-follow {
+  .follow {
     font-size: 1.5em;
   }
   .icons img {

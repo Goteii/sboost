@@ -6,7 +6,7 @@ import { CoachingViewProps } from "../CoachingModel";
 
 import { conquestMasters, conquestIconOn, duelDiamond } from "../../../shared/images/SharedIcons";
 
-import "./CoachingViewStyles.scss";
+import "./styles.scss";
 
 const CoachingView = (props:CoachingViewProps) => {
   const { nextStep } = props;
